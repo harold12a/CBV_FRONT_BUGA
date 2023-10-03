@@ -24,7 +24,7 @@ const NavBar = () => {
       });
 
       if (result.isConfirmed) {
-        await axios.put(apiUrl + "/auth/signout", null, headers());
+        await axios.put(apiUrl + "/auth/singout", null, headers());
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         window.location.replace("/");
@@ -32,8 +32,8 @@ const NavBar = () => {
     } catch (error) {
       Swal.fire({
         icon: "error",
-        title: "Internal Error",
-        text: "Try later..",
+        title: " Error",
+        text: "Error al cerrar la Session..",
       });
     }
   };
@@ -74,17 +74,19 @@ const NavBar = () => {
   }, []);
   let user = JSON.parse(localStorage.getItem("user"));
   // console.log(user);
+  let email = user?.email;
+  let photo = user?.photo;
   let user_id = user?._id;
   return (
     <>
       <nav className="bg-[#F13838] border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 ">
-          <a href="https://flowbite.com/" className="flex items-center">
+          <Anchor to="/" className="flex items-center">
             <HiHome className="h-6 mr-3 text-3xl" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hidden xl:block">
               Bomberos Buga
             </span>
-          </a>
+          </Anchor>
           <div className="flex items-center md:order-2">
             {user_id ? (
               <>
@@ -99,7 +101,7 @@ const NavBar = () => {
                   <span className="sr-only">Open user menu</span>
                   <img
                     className="w-8 h-8 rounded-full"
-                    src="/docs/images/people/profile-picture-3.jpg"
+                    src={photo}
                     alt="user photo"
                   />
                 </button>
@@ -113,7 +115,7 @@ const NavBar = () => {
                       Perfil
                     </span>
                     <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                      name@flowbite.com
+                      {email}
                     </span>
                   </div>
                   <ul className="py-2" aria-labelledby="user-menu-button">
@@ -129,7 +131,7 @@ const NavBar = () => {
                 </div>
               </>
             ) : (
-              <Anchor>
+              <Anchor to="/ingresar">
                 <HiOutlineUserCircle className="text-3xl " />
               </Anchor>
             )}

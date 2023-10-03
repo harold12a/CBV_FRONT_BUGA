@@ -1,11 +1,11 @@
 // import Buttons from "../pages/Buttons";
 
-// import Principal from "../components/Principal";
+import Principal from "../components/Principal";
 
 const Index = () => {
   return (
     <main>
-      {/* <Principal /> */}
+      <Principal />
       {/* <Buttons /> */}
       {/* <Footer /> */}
     </main>
