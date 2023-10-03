@@ -1,18 +1,14 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
-import { Outlet } from 'react-router-dom'
-
-// import Buttons from '../pages/Buttons'
-
+import NavBar from "../components/NavBar";
+// import Footer from "../components/Footer";
+import { Outlet } from "react-router-dom";
 const Main = () => {
   return (
     <>
-    <NavBar/>
-    <Outlet/>
-    {/* <Buttons /> */}
-
+      <NavBar />
+      <Outlet />
+      {/* <Footer /> */}
     </>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

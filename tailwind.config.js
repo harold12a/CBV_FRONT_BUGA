@@ -3,11 +3,12 @@
 module.exports = {
   mode: 'jit',
   purge: [
-      './src/**/*.{js,jsx,ts,tsx}'
+    './src/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
-      extend: {}
+    extend: {}
   },
   variants: {},
-  plugins: []
+  plugins: [require('flowbite/plugin')],
+  content: ["./node_modules/flowbite/**/*.js"]
 }

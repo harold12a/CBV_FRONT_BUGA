@@ -1,46 +1,40 @@
-import React from "react";
 import { Link as Anchor, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
 const Resgister = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const singup = ()=>{
-
-    setTimeout(()=>navigate('/ingresar'),2000)
+  const singup = () => {
+    setTimeout(() => navigate("/ingresar"), 2000);
 
     let data = {
       email: email.current.value,
       password: password.current.value,
-      name:name.current.value
-     
-     }
-     console.log(data);
-  }
+      name: name.current.value,
+    };
+    console.log(data);
+  };
 
-  const name = useRef()
-  const email = useRef()
-  const password = useRef()
-
-
+  const name = useRef();
+  const email = useRef();
+  const password = useRef();
 
   return (
     <main className="flex w-full min-h-screen items-center justify-between relative ">
       <div className="flex flex-col md:absolute md:top-0 md:right-[50%] justify-center items-center h-screen w-full md:w-[50%]">
-      
         <p className="font-semibold text-[32px] text-center">Bienvenidos!</p>
         <p className="font-semibold text-[12px] mb-[12px] text-center p-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nam nobis illo modi facilis molestiae optio atque deserunt impedit labor
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nam
+          nobis illo modi facilis molestiae optio atque deserunt impedit labor
         </p>
         <form className="flex flex-col my-[2px]">
-        <input
+          <input
             className="w-[260px] md:w-[300px] lg:w-[360px] xl:w-[440px] h-[45px] p-2 my-[12px] text-[12px] rounded-lg border-2 border-[#1F1F1F]"
             type="nombre"
             name="nombre"
             id="nombre"
             placeholder="Nombre"
             ref={name}
-            
           />
           <input
             className="w-[260px] md:w-[300px] lg:w-[260px] xl:w-[440px] h-[45px] p-2 my-[12px] text-[12px] rounded-lg border-2 border-[#1F1F1F]"
@@ -50,7 +44,7 @@ const Resgister = () => {
             placeholder="Email"
             ref={email}
           />
-     
+
           <input
             className="w-[260px] md:w-[300px] lg:w-[360px] xl:w-[440px] h-[45px] p-2 my-[12px] text-[12px] rounded-lg border-2 border-[#1F1F1F]"
             type="password"
@@ -92,14 +86,14 @@ const Resgister = () => {
         </form>
         <p className="font-semibold text-[12px] mt-[12px] text-center p-2">
           Ya estas registrado?{" "}
-          <Anchor to='/ingresar' className="text-[#4338CA]">Ingresar</Anchor>!
+          <Anchor to="/ingresar" className="text-[#4338CA]">
+            Ingresar
+          </Anchor>
+          !
         </p>
         <p className="font-semibold text-[12px] text-center p-2">
-          regresar al {" "}
-          <Anchor
-            to='/'
-            className="text-[#4338CA] hover:text-black"
-          >
+          regresar al{" "}
+          <Anchor to="/" className="text-[#4338CA] hover:text-black">
             inicio
           </Anchor>
           !
