@@ -55,7 +55,7 @@ const NavBar = () => {
     // console.log(user);
     if (user?.role === 1) {
       setOptions([
-        { to: "/", title: "Inicio" },
+        // { to: "/", title: "Inicio" },
         { to: "/botones", title: "Panel de Administracion" },
       ]);
     } else {

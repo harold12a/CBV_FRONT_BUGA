@@ -3,10 +3,13 @@ import { Link as Anchor } from "react-router-dom";
 const Buttons = () => {
   return (
     <>
+      <h1 className="text-xl pl-2 mt-2">Botones de administracion</h1>
+      <div className="border-t-2 border-gray-400   my-4"></div>
+
       <div className="bg-white border-4 border-white drop-shadow-xl  h-[60vh] mx-5 mt-[8vh]  ">
         <div className=" mt-4 text-center  ">
           <Anchor
-            to="/schema"
+            to="/noticias"
             type="button"
             className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-2xl text-md px-[78px] py-2.5 text-center mr-2 mb-2 "
           >

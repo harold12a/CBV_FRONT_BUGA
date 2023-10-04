@@ -5,6 +5,7 @@ import Register from "./Register";
 import SignIn from "./SignIn";
 import Buttons from "./Buttons";
 import Schema from "./Schema";
+import Noticias from "../schema/Noticias";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/schema",
         element: <Schema />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+      {
+        path: "/noticias",
+        element: <Noticias />,
         loader: () => {
           let user = JSON.parse(localStorage.getItem("user"));
           return !user && redirect("/not-allowed");
