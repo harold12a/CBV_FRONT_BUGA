@@ -56,7 +56,7 @@ const NavBar = () => {
     if (user?.role === 1) {
       setOptions([
         { to: "/", title: "Inicio" },
-        { to: "/schema", title: "schema" },
+        { to: "/botones", title: "Panel de Administracion" },
       ]);
     } else {
       setOptions([
@@ -147,7 +147,7 @@ const NavBar = () => {
               <svg
                 className="w-5 h-5 text-black"
                 aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
+                // xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 17 14"
               >

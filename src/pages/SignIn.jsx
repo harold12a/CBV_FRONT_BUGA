@@ -17,6 +17,7 @@ const SindIn = () => {
       password: password.current.value?.trim(),
     };
     console.log(data);
+
     try {
       let user = await axios.post(apiUrl + "/auth/signin", data);
       if (user) {
