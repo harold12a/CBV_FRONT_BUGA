@@ -6,6 +6,7 @@ import SignIn from "./SignIn";
 import Buttons from "./Buttons";
 import Schema from "./Schema";
 import Noticias from "../schema/Noticias";
+import NotiView from "./NotiView";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
           return !user && redirect("/not-allowed");
         },
       },
+      { path: "/noticias_vista/:_id", element: <NotiView /> },
     ],
   },
 ]);

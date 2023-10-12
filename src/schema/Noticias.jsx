@@ -22,7 +22,9 @@ const Noticias = () => {
             <Option>Bombero</Option>
           </Select>
         </div>
+        <Input color="teal" label="Nombre de la unidad" />
       </div>
+
       <div className="flex flex-col w-72 mx-auto justify-center mt-5">
         <button
           type="button"

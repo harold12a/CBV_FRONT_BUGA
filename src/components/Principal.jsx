@@ -1,15 +1,13 @@
 import { MdOutlinePhoneIphone } from "react-icons/md";
 // import { Link as Anchor } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+// import { Link as Anchor } from "react-router-dom";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-
 // import required modules
 import { Pagination } from "swiper/modules";
-
 import {
   Card,
   CardHeader,
@@ -19,8 +17,25 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import axios from "axios";
+import apiUrl from "../api/apiUrl";
+import headers from "../api/headers";
+import { useEffect, useState } from "react";
+import { CardNoticias } from "../pages/CardNoticias";
 
 const Principal = () => {
+  const [noticias, setNoticias] = useState([]);
+
+  useEffect(() => {
+    try {
+      axios.get(apiUrl + "/noticias", headers()).then((res) => {
+        setNoticias(res.data.response);
+        console.log(res.data.response);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
   return (
     <>
       <img
@@ -154,7 +169,7 @@ const Principal = () => {
           </span>
         </button>
       </div>
-      <h1 className="text-xl pl-2 mt-2">Noticias</h1>
+      <h1 className="text-xl pl-2 mt-2 font-bold">Noticias</h1>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       {/* Noticias */}
       <Swiper
@@ -167,60 +182,23 @@ const Principal = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[12vh] relative">
-          <img
-            className="h-64 w-[93%] rounded-full object-cover object-center absolute mt-[40px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-            alt="nature image"
-          />
-          <div className="mt-[25vh]">
-            <h1 className="text-center"> Titulo de la nocitia</h1>
-            <p className="mt-1 mb-4 pl-12">4/10/2023</p>
-            <button
-              type="button"
-              className="text-white flex mx-auto items-center bg-gradient-to-r underline from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Leer mas
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[12vh] relative">
-          <img
-            className="h-64 w-[93%] rounded-full object-cover object-center absolute mt-[40px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-            alt="nature image"
-          />
-          <div className="mt-[25vh]">
-            <h1 className="text-center"> Titulo de la nocitia</h1>
-            <p className="mt-1 mb-4 pl-12">4/10/2023</p>
-            <button
-              type="button"
-              className="text-white flex mx-auto items-center bg-gradient-to-r underline from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Leer mas
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[12vh] relative">
-          <img
-            className="h-64 w-[93%] rounded-full object-cover object-center absolute mt-[40px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-            alt="nature image"
-          />
-          <div className="mt-[25vh]">
-            <h1 className="text-center"> Titulo de la nocitia</h1>
-            <p className="mt-1 mb-4 pl-12">4/10/2023</p>
-            <button
-              type="button"
-              className="text-white flex mx-auto items-center bg-gradient-to-r underline from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Leer mas
-            </button>
-          </div>
-        </SwiperSlide>
+        {noticias.map((each) => (
+          <SwiperSlide
+            key={each._id.toString()}
+            className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[14vh] mb-[30px]  relative"
+          >
+            <CardNoticias
+              _id={each._id.toString()}
+              title={each.title}
+              date={each.date}
+              description={each.description}
+              image={each.image}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
       {/* Cursos */}
-      <h1 className="text-xl pl-2 mt-2">Cursos</h1>
+      <h1 className="text-xl pl-2 mt-2 font-bold">Cursos</h1>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
 
       <Swiper
@@ -332,7 +310,7 @@ const Principal = () => {
           </Card>
         </SwiperSlide>
       </Swiper>
-      <h1 className="text-xl pl-2 mt-2">Psicologia</h1>
+      <h1 className="text-xl pl-2 mt-2 font-bold">Psicologia</h1>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <a
         href="#"
@@ -367,9 +345,9 @@ const Principal = () => {
           </button>
         </div>
       </a>
-      <h1 className="text-xl pl-2 mt-2">Servicios</h1>
+      <h1 className="text-xl pl-2 mt-2 font-bold">Servicios</h1>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <h1 className="text-md pl-2 mt-2 mb-4">Extintores</h1>
+      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Extintores</h1>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"
@@ -385,7 +363,7 @@ const Principal = () => {
           </button>
         </figcaption>
       </figure>
-      <h1 className="text-md pl-2 mt-2 mb-4">Capacitaciones</h1>
+      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Capacitaciones</h1>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"
@@ -401,7 +379,7 @@ const Principal = () => {
           </button>
         </figcaption>
       </figure>
-      <h1 className="text-md pl-2 mt-2 mb-4">Ambulancia</h1>
+      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Ambulancia</h1>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"
@@ -417,7 +395,7 @@ const Principal = () => {
           </button>
         </figcaption>
       </figure>
-      <h1 className="text-md pl-2 mt-2 mb-4">Inspecciones</h1>
+      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Inspecciones</h1>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"
@@ -439,7 +417,7 @@ const Principal = () => {
         width="400"
         height="300"
         className="border-0"
-        allowfullscreen=""
+        allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
