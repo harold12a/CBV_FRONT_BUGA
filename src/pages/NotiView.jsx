@@ -56,9 +56,8 @@ const NotiView = () => {
         {noticia?.description}
       </p>
       <div className="mx-auto max-w-screen-xl px-4 mt-4 ">
-        <h1 className="font-bold">Atendida por: </h1>
-        <h2>Capitan</h2>
-        <h2>Alzate</h2>
+        <h2 className="text-sm font-bold ">liena de emergencia</h2>
+        <h2>119</h2>
       </div>
     </>
   );

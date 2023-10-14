@@ -1,57 +1,109 @@
 import { Link as Anchor } from "react-router-dom";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  Typography,
+} from "@material-tailwind/react";
+import { HiOutlineUserAdd } from "react-icons/hi";
 
 const Buttons = () => {
   return (
     <>
-      <h1 className="text-xl pl-2 mt-2">Botones de administracion</h1>
+      <h1 className="text-2xl pl-2 mt-2 font-bold">
+        Botones de administracion
+      </h1>
       <div className="border-t-2 border-gray-400   my-4"></div>
-
-      <div className="bg-white border-4 border-white drop-shadow-xl  h-[60vh] mx-5 mt-[8vh]  ">
-        <div className=" mt-4 text-center  ">
-          <Anchor
-            to="/noticias"
-            type="button"
-            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-2xl text-md px-[78px] py-2.5 text-center mr-2 mb-2 "
-          >
-            Noticias
-          </Anchor>
-          <Anchor
-            to="/schema"
-            type="button"
-            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-2xl text-md px-[83px] py-2.5 text-center mr-2 mb-2 mt-2"
-          >
-            Cursos
-          </Anchor>
-          <Anchor
-            to="/schema"
-            type="button"
-            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-2xl text-md px-[53px] py-2.5 text-center mr-2 mb-2 mt-2"
-          >
-            Capacitaciones
-          </Anchor>
-          <Anchor
-            to="/schema"
-            type="button"
-            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-2xl text-md px-[70px] py-2.5 text-center mr-2 mb-2 mt-2"
-          >
-            Extintores
-          </Anchor>
-          <Anchor
-            to="/schema"
-            type="button"
-            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-2xl text-md px-[70px] py-2.5 text-center mr-2 mb-2 mt-2"
-          >
-            Psicólogia
-          </Anchor>
-          <Anchor
-            to="/schema"
-            type="button"
-            className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-2xl text-md px-[70px] py-2.5 text-center mr-2 mb-2 mt-2"
-          >
-            Pendiente
-          </Anchor>
-        </div>
-      </div>
+      <Anchor to="/noticias">
+        <Card className="mt-6 w-96 drop-shadow-2xl ">
+          <CardBody>
+            <Typography
+              variant="h5"
+              color="blue-gray"
+              className="mb-2 flex text-[30px] "
+            >
+              <HiOutlineUserAdd className="text-[70px]" />
+              Agregar Nueva Noticia
+            </Typography>
+            <Typography className="font-bold">
+              Lorem ipsum dolor sit amet, consectetur sit amet, consectetur .
+            </Typography>
+          </CardBody>
+          <CardFooter className="pt-0"></CardFooter>
+        </Card>
+      </Anchor>
+      <Anchor to="/schema">
+        <Card className="mt-6 w-96 drop-shadow-2xl ">
+          <CardBody>
+            <Typography
+              variant="h5"
+              color="blue-gray"
+              className="mb-2 flex text-[30px] "
+            >
+              <HiOutlineUserAdd className="text-[70px]" />
+              Agregar Nuevo Curso
+            </Typography>
+            <Typography className="font-bold">
+              Lorem ipsum dolor sit amet, consectetur sit amet, consectetur .
+            </Typography>
+          </CardBody>
+          <CardFooter className="pt-0"></CardFooter>
+        </Card>
+      </Anchor>
+      <Anchor to="/schema">
+        <Card className="mt-6 w-96 drop-shadow-2xl ">
+          <CardBody>
+            <Typography
+              variant="h5"
+              color="blue-gray"
+              className="mb-2 flex text-[30px] "
+            >
+              <HiOutlineUserAdd className="text-[70px]" />
+              Agregar Nueva Capacitacion
+            </Typography>
+            <Typography className="font-bold">
+              Lorem ipsum dolor sit amet, consectetur sit amet, consectetur .
+            </Typography>
+          </CardBody>
+          <CardFooter className="pt-0"></CardFooter>
+        </Card>
+      </Anchor>
+      <Anchor to="/schema">
+        <Card className="mt-6 w-96 drop-shadow-2xl ">
+          <CardBody>
+            <Typography
+              variant="h5"
+              color="blue-gray"
+              className="mb-2 flex text-[30px] "
+            >
+              <HiOutlineUserAdd className="text-[70px]" />
+              Agregar Nuevos Extintores
+            </Typography>
+            <Typography className="font-bold">
+              Lorem ipsum dolor sit amet, consectetur sit amet, consectetur .
+            </Typography>
+          </CardBody>
+          <CardFooter className="pt-0"></CardFooter>
+        </Card>
+      </Anchor>
+      <Anchor to="/schema">
+        <Card className="mt-6 w-96 drop-shadow-2xl ">
+          <CardBody>
+            <Typography
+              variant="h5"
+              color="blue-gray"
+              className="mb-2 flex text-[30px] "
+            >
+              <HiOutlineUserAdd className="text-[70px]" />
+              Agregar Nuevo Post
+            </Typography>
+            <Typography className="font-bold">
+              Lorem ipsum dolor sit amet, consectetur sit amet, consectetur .
+            </Typography>
+          </CardBody>
+          <CardFooter className="pt-0"></CardFooter>
+        </Card>
+      </Anchor>
     </>
   );
 };
