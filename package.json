@@ -8,11 +8,17 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
-  }, "tags": [
+  },
+  "tags": [
     "swiper"
   ],
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
     "@material-tailwind/react": "^2.1.2",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.14",
     "axios": "^1.5.1",
     "bootstrap": "^5.3.0",
     "flowbite": "^1.8.1",

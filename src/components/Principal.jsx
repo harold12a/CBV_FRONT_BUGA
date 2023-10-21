@@ -1,41 +1,51 @@
 import { MdOutlinePhoneIphone } from "react-icons/md";
-// import { Link as Anchor } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { Link as Anchor } from "react-router-dom";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 // import required modules
 import { Pagination } from "swiper/modules";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import axios from "axios";
 import apiUrl from "../api/apiUrl";
 import headers from "../api/headers";
 import { useEffect, useState } from "react";
 import { CardNoticias } from "../pages/CardNoticias";
+import { CardCourse } from "../pages/CardCourse";
+import { Link as Anchor } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const Principal = () => {
   const [noticias, setNoticias] = useState([]);
+  const [courses, setCourses] = useState([]);
 
+  // useEffect noticias
   useEffect(() => {
     try {
       axios.get(apiUrl + "/noticias", headers()).then((res) => {
         setNoticias(res.data.response);
-        console.log(res.data.response);
+        // console.log(res.data.response);
       });
     } catch (error) {
+      error;
       console.log(error);
     }
   }, []);
+
+  // useEffect cursos
+
+  useEffect(() => {
+    try {
+      axios.get(apiUrl + "/cursos", headers()).then((res) => {
+        setCourses(res.data.response);
+        // console.log(res.data.response);
+      });
+    } catch (error) {
+      error;
+      console.log(error);
+    }
+  }, []);
+
   return (
     <>
       <img
@@ -209,106 +219,22 @@ const Principal = () => {
         modules={[Pagination]}
         className="h-[70vh]"
       >
-        <SwiperSlide className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl   mt-[1vh] mb-[5vh]  ">
-          <Card className="w-full max-w-[26rem] shadow-lg">
-            <CardHeader floated={false} color="blue-gray">
-              <img src="/public/images/curso1.webp" alt="ui/ux review check" />
-              <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-              <IconButton
-                size="sm"
-                color="red"
-                variant="text"
-                className="!absolute top-4 right-4 rounded-full"
-              ></IconButton>
-            </CardHeader>
-            <CardBody>
-              <div className="mb-3 flex items-center justify-between">
-                <Typography
-                  variant="h5"
-                  color="blue-gray"
-                  className="font-medium"
-                >
-                  Brigada contra incendios
-                </Typography>
-                <Typography
-                  color="blue-gray"
-                  className="flex items-center gap-1.5 font-normal"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="-mt-0.5 h-5 w-5 text-yellow-700"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  4.8
-                </Typography>
-              </div>
-              <Typography color="gray">Inicio de curso</Typography>
-              <Typography color="gray">5/12-2023</Typography>
-            </CardBody>
-            <CardFooter className="pt-3">
-              <Button size="lg" fullWidth={true}>
-                Mas Informacion
-              </Button>
-            </CardFooter>
-          </Card>
-        </SwiperSlide>
-        <SwiperSlide className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl   mt-[1vh] mb-[5vh]  ">
-          <Card className="w-full max-w-[26rem] shadow-lg">
-            <CardHeader floated={false} color="blue-gray">
-              <img src="/public/images/curso1.webp" alt="ui/ux review check" />
-              <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-              <IconButton
-                size="sm"
-                color="red"
-                variant="text"
-                className="!absolute top-4 right-4 rounded-full"
-              ></IconButton>
-            </CardHeader>
-            <CardBody>
-              <div className="mb-3 flex items-center justify-between">
-                <Typography
-                  variant="h5"
-                  color="blue-gray"
-                  className="font-medium"
-                >
-                  Brigada contra incendios
-                </Typography>
-                <Typography
-                  color="blue-gray"
-                  className="flex items-center gap-1.5 font-normal"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="-mt-0.5 h-5 w-5 text-yellow-700"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  4.8
-                </Typography>
-              </div>
-              <Typography color="gray">Inicio de curso</Typography>
-              <Typography color="gray">5/12-2023</Typography>
-            </CardBody>
-            <CardFooter className="pt-3">
-              <Button size="lg" fullWidth={true}>
-                Mas Informacion
-              </Button>
-            </CardFooter>
-          </Card>
-        </SwiperSlide>
+        {courses.map((each) => (
+          <SwiperSlide
+            key={each._id.toString()}
+            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[0vh]  "
+          >
+            <CardCourse
+              _id={each._id.toString()}
+              title={each.title}
+              date={each.date}
+              description={each.description}
+              image={each.image}
+              price={each.price}
+              timeofCurse={each.timeofCurse}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
       <h1 className="text-xl pl-2 mt-2 font-bold">Psicologia</h1>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
@@ -317,32 +243,27 @@ const Principal = () => {
         className="flex  flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <img
-          className="object-cover w-[75%] rounded-t-lg h-[55%] md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+          className="object-cover w-[75%] rounded-t-lg h-[55%] md:h-auto md:w-48 md:rounded-none md:rounded-l-lg mt-4"
           src="/public/images/jessica.jpg"
           alt="jessica-img"
         />
-        <div className="flex flex-col justify-between p-4 leading-normal">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <div className="flex flex-col mt-4 text-center">
+          <Typography variant="h4" className=" font-bold">
             Jessica Tatiana Betancourth
-          </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          </Typography>
+          <Typography variant="h6" className=" font-bold mb-4" color="gray">
             Especialista en Atentcion Psicosocial
-          </p>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Calular: 123456789
-          </p>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            EMail: jessica@gmail.com
-          </p>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            https://www.linkedin.com/search/results/
-          </p>
-          <button
-            type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          >
-            Ver Mas
-          </button>
+          </Typography>
+          <Anchor to={"/post_view"}>
+            <Button
+              variant="contained"
+              size="lg"
+              fullWidth={true}
+              className="mb-3"
+            >
+              Ver mas
+            </Button>
+          </Anchor>
         </div>
       </a>
       <h1 className="text-xl pl-2 mt-2 font-bold">Servicios</h1>

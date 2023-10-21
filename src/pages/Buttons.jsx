@@ -10,10 +10,10 @@ import { HiOutlineUserAdd } from "react-icons/hi";
 const Buttons = () => {
   return (
     <>
-      <h1 className="text-2xl pl-2 mt-2 font-bold">
+      {/* <h1 className="text-2xl pl-2 mt-2 font-bold">
         Botones de administracion
-      </h1>
-      <div className="border-t-2 border-gray-400   my-4"></div>
+      </h1> */}
+      {/* <div className="border-t-2 border-gray-400   my-4"></div> */}
       <Anchor to="/noticias">
         <Card className="mt-6 w-96 drop-shadow-2xl ">
           <CardBody>
@@ -32,7 +32,7 @@ const Buttons = () => {
           <CardFooter className="pt-0"></CardFooter>
         </Card>
       </Anchor>
-      <Anchor to="/schema">
+      <Anchor to="/curso">
         <Card className="mt-6 w-96 drop-shadow-2xl ">
           <CardBody>
             <Typography
@@ -50,7 +50,7 @@ const Buttons = () => {
           <CardFooter className="pt-0"></CardFooter>
         </Card>
       </Anchor>
-      <Anchor to="/schema">
+      <Anchor to="/capacitacion">
         <Card className="mt-6 w-96 drop-shadow-2xl ">
           <CardBody>
             <Typography
@@ -68,7 +68,7 @@ const Buttons = () => {
           <CardFooter className="pt-0"></CardFooter>
         </Card>
       </Anchor>
-      <Anchor to="/schema">
+      <Anchor to="/extintor">
         <Card className="mt-6 w-96 drop-shadow-2xl ">
           <CardBody>
             <Typography
@@ -86,7 +86,7 @@ const Buttons = () => {
           <CardFooter className="pt-0"></CardFooter>
         </Card>
       </Anchor>
-      <Anchor to="/schema">
+      <Anchor to="/psicologia">
         <Card className="mt-6 w-96 drop-shadow-2xl ">
           <CardBody>
             <Typography

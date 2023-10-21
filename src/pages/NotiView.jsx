@@ -5,22 +5,15 @@ import apiUrl from "../api/apiUrl";
 import headers from "../api/headers";
 const NotiView = () => {
   let { _id } = useParams();
-  console.log("id: " + _id);
+  // console.log("id: " + _id);
   const [noticia, setNoticia] = useState(null);
-  console.log(noticia);
+  // console.log(noticia);
 
   useEffect(() => {
     if (_id) {
       axios(apiUrl + "/noticias/" + _id, headers())
         .then((res) => {
-          //         setNoticia(res.data.response.find((noticia) => noticia._id === _id));
-          //         console.log(res.data);
-          //       })
-          //       .catch((err) => console.log(err));
-          //   }
-          // }, [_id]);
-
-          // data sin hora zulo
+          // data sin hora zulo date
           const noticiaData = res.data.response.find((not) => not._id === _id);
           if (noticiaData) {
             noticiaData.date = new Date(noticiaData.date).toLocaleString(

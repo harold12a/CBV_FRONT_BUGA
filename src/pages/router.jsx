@@ -7,6 +7,12 @@ import Buttons from "./Buttons";
 import Schema from "./Schema";
 import Noticias from "../schema/Noticias";
 import NotiView from "./NotiView";
+import Cursos from "../schema/Cursos";
+import Extintores from "../schema/Extintores";
+import Capacitaciones from "../schema/Capacitaciones";
+import Psicologia from "../schema/Psicologia";
+import { Courseview } from "./Courseview";
+import { CardPost } from "./CardPost";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +39,13 @@ const router = createBrowserRouter([
           return !user && redirect("/not-allowed");
         },
       },
+      { path: "/curso", element: <Cursos /> },
+      { path: "/extintor", element: <Extintores /> },
+      { path: "/capacitacion", element: <Capacitaciones /> },
+      { path: "/psicologia", element: <Psicologia /> },
       { path: "/noticias_vista/:_id", element: <NotiView /> },
+      { path: "/course_vista/:_id", element: <Courseview /> },
+      { path: "/post_view", element: <CardPost /> },
     ],
   },
 ]);
