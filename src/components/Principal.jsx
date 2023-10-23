@@ -179,7 +179,9 @@ const Principal = () => {
           </span>
         </button>
       </div>
-      <h1 className="text-xl pl-2 mt-2 font-bold">Noticias</h1>
+      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
+        Noticias
+      </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       {/* Noticias */}
       <Swiper
@@ -208,7 +210,9 @@ const Principal = () => {
         ))}
       </Swiper>
       {/* Cursos */}
-      <h1 className="text-xl pl-2 mt-2 font-bold">Cursos</h1>
+      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
+        Cursos
+      </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
 
       <Swiper
@@ -236,7 +240,9 @@ const Principal = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <h1 className="text-xl pl-2 mt-2 font-bold">Psicologia</h1>
+      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
+        Psicologia
+      </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <a
         href="#"
@@ -266,9 +272,13 @@ const Principal = () => {
           </Anchor>
         </div>
       </a>
-      <h1 className="text-xl pl-2 mt-2 font-bold">Servicios</h1>
+      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
+        Servicios
+      </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Extintores</h1>
+      <Typography variant="h5" className=" font-bold pl-2 mt-2 mb-4 ">
+        Extintores
+      </Typography>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"
@@ -276,15 +286,19 @@ const Principal = () => {
           alt="nature image"
         />
         <figcaption className="absolute bottom-8 left-[225px]  ">
-          <button
-            type="button"
-            className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-          >
-            Comprar
-          </button>
+          <Anchor to={"/servicios_extintores"}>
+            <button
+              type="button"
+              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Comprar
+            </button>
+          </Anchor>
         </figcaption>
       </figure>
-      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Capacitaciones</h1>
+      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
+        Capacitaciones
+      </Typography>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"
@@ -300,7 +314,9 @@ const Principal = () => {
           </button>
         </figcaption>
       </figure>
-      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Ambulancia</h1>
+      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
+        Ambulancia
+      </Typography>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"
@@ -316,7 +332,9 @@ const Principal = () => {
           </button>
         </figcaption>
       </figure>
-      <h1 className="text-md pl-2 mt-2 mb-4 font-bold">Inspecciones</h1>
+      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
+        Inspecciones
+      </Typography>
       <figure className="relative h-96 w-full">
         <img
           className="h-full w-full rounded-xl object-cover object-center"

@@ -21,7 +21,7 @@ export const CardPost = () => {
       });
     } catch (error) {
       error;
-      console.log(error);
+      // console.log(error);
     }
   }, []);
   return (

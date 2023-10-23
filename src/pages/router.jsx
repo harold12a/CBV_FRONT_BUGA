@@ -13,6 +13,7 @@ import Capacitaciones from "../schema/Capacitaciones";
 import Psicologia from "../schema/Psicologia";
 import { Courseview } from "./Courseview";
 import { CardPost } from "./CardPost";
+import { Extinguisher } from "../services/extinguisher";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { path: "/noticias_vista/:_id", element: <NotiView /> },
       { path: "/course_vista/:_id", element: <Courseview /> },
       { path: "/post_view", element: <CardPost /> },
+      { path: "/servicios_extintores", element: <Extinguisher /> },
     ],
   },
 ]);

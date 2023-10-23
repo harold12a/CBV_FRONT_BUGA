@@ -14,7 +14,7 @@ const NavBar = () => {
         text: "¿Quiere salir de la Session?",
         icon: "question",
         showCancelButton: true,
-        confirmButtonText: "yes",
+        confirmButtonText: "Si",
         cancelButtonText: "Cancel",
         didOpen: () => {
           const confirmButton = document.querySelector(".swal2-confirm");
