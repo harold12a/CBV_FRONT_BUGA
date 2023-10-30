@@ -4,20 +4,19 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import apiUrl from "../api/apiUrl";
 import headers from "../api/headers";
-
-export const Courseview = () => {
+export const TrainingView = () => {
   let { _id } = useParams();
   // console.log("id: " + _id);
-  const [course, setCourse] = useState(null);
+  const [training, setTraining] = useState(null);
   // console.log(course);
   useEffect(() => {
     if (_id) {
-      axios(apiUrl + "/cursos/" + _id, headers())
+      axios(apiUrl + "/capacitaciones/" + _id, headers())
         .then((res) => {
           // data sin hora zulo date
-          const courseData = res.data.response.find((not) => not._id === _id);
-          if (courseData) {
-            courseData.date = new Date(courseData.date).toLocaleString(
+          const trainingData = res.data.response.find((not) => not._id === _id);
+          if (trainingData) {
+            trainingData.date = new Date(trainingData.date).toLocaleString(
               "es-ES",
               {
                 year: "numeric",
@@ -25,7 +24,7 @@ export const Courseview = () => {
                 day: "numeric",
               }
             );
-            setCourse(courseData);
+            setTraining(trainingData);
           }
         })
         .catch((err) => console.log(err));
@@ -34,39 +33,40 @@ export const Courseview = () => {
   return (
     <>
       <h1 className="text-xl pl-2 mt-2 font-bold uppercase text-center">
-        {course?.title}
+        {training?.title}
       </h1>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <div className="mx-auto max-w-screen-xl px-4">
         <img
           className="h-96 w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50 mb-5"
-          src={course?.image}
+          src={training?.image}
           alt="nature image"
         />
       </div>
       <Paper elevation={3} className="mx-8">
         <p className="text-center font-bold text-xl mt-3 mb-4   bg-gray-300">
-          La Federacion del Bomberos del Valle del Cauca y sus Regiones tiene un
-          descuento del 50%
+          Empresas del valle del cauca tiene un descuento del 20%
         </p>
       </Paper>
 
-      <p className="mx-auto max-w-screen-xl px-4 mt-2">{course?.description}</p>
+      <p className="mx-auto max-w-screen-xl px-4 mt-2">
+        {training?.description}
+      </p>
 
       <div className="mt-4 mb-2">
         <h1 className="ml-6 font-bold">Inicio de curso</h1>
-        <p className="mt-1 ml-6">{course?.date}</p>
+        <p className="mt-1 ml-6">{training?.date}</p>
       </div>
       <div className="mt-2">
         <h1 className="ml-6 font-bold">Duracion</h1>
-        <p className="mt-1 ml-6">{course?.timeofCurse}</p>
+        <p className="mt-1 ml-6">{training?.timeofTraining}</p>
       </div>
       <div className="mt-2 mb-5">
         <h1 className="ml-6 font-bold">Precio</h1>
         {/* para que los decimales de la data aparesca exactos ya que es un number y no un string */}
         <p className="mt-1 ml-6">
           $
-          {course?.price.toLocaleString("es-CO", {
+          {training?.price.toLocaleString("es-CO", {
             minimumFractionDigits: 3,
             maximumFractionDigits: 3,
           })}

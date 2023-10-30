@@ -226,7 +226,7 @@ const Principal = () => {
         {courses.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[0vh]  "
+            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[-3.8vh]  "
           >
             <CardCourse
               _id={each._id.toString()}
@@ -306,12 +306,14 @@ const Principal = () => {
           alt="nature image"
         />
         <figcaption className="absolute bottom-8 left-[225px]  ">
-          <button
-            type="button"
-            className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-          >
-            Solicitar
-          </button>
+          <Anchor to={"/capacitaciones"}>
+            <button
+              type="button"
+              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Solicitar
+            </button>
+          </Anchor>
         </figcaption>
       </figure>
       <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
@@ -324,12 +326,14 @@ const Principal = () => {
           alt="nature image"
         />
         <figcaption className="absolute bottom-8 left-[225px]  ">
-          <button
-            type="button"
-            className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-          >
-            Solicitar
-          </button>
+          <Anchor to={"/servicios_ambulancia"}>
+            <button
+              type="button"
+              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Solicitar
+            </button>
+          </Anchor>
         </figcaption>
       </figure>
       <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
@@ -342,12 +346,14 @@ const Principal = () => {
           alt="nature image"
         />
         <figcaption className="absolute bottom-8 left-[225px]  ">
-          <button
-            type="button"
-            className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-          >
-            Solicitar
-          </button>
+          <Anchor to={"/servicios_inspecciones"}>
+            <button
+              type="button"
+              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Solicitar
+            </button>
+          </Anchor>
         </figcaption>
       </figure>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>

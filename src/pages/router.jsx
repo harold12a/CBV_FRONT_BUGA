@@ -14,6 +14,10 @@ import Psicologia from "../schema/Psicologia";
 import { Courseview } from "./Courseview";
 import { CardPost } from "./CardPost";
 import { Extinguisher } from "../services/extinguisher";
+import { Ambulance } from "../services/Ambulance";
+import { Inspection } from "../services/Inspection";
+import { Training } from "../services/Training";
+import { TrainingView } from "../services/TrainingView";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +44,14 @@ const router = createBrowserRouter([
           return !user && redirect("/not-allowed");
         },
       },
-      { path: "/curso", element: <Cursos /> },
+      {
+        path: "/curso",
+        element: <Cursos />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
       { path: "/extintor", element: <Extintores /> },
       { path: "/capacitacion", element: <Capacitaciones /> },
       { path: "/psicologia", element: <Psicologia /> },
@@ -48,6 +59,10 @@ const router = createBrowserRouter([
       { path: "/course_vista/:_id", element: <Courseview /> },
       { path: "/post_view", element: <CardPost /> },
       { path: "/servicios_extintores", element: <Extinguisher /> },
+      { path: "/servicios_ambulancia", element: <Ambulance /> },
+      { path: "/servicios_inspecciones", element: <Inspection /> },
+      { path: "/capacitaciones", element: <Training /> },
+      { path: "/capacitaciones/:_id", element: <TrainingView /> },
     ],
   },
 ]);
