@@ -18,6 +18,7 @@ import { Ambulance } from "../services/Ambulance";
 import { Inspection } from "../services/Inspection";
 import { Training } from "../services/Training";
 import { TrainingView } from "../services/TrainingView";
+import { Card } from "./EditNoticias/Card";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,7 @@ const router = createBrowserRouter([
       { path: "/servicios_inspecciones", element: <Inspection /> },
       { path: "/capacitaciones", element: <Training /> },
       { path: "/capacitaciones/:_id", element: <TrainingView /> },
+      { path: "/noticias_editar", element: <Card /> },
     ],
   },
 ]);
