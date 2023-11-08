@@ -5,6 +5,8 @@ import headers from "../api/headers";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link as Anchor } from "react-router-dom";
+import { Button } from "flowbite-react";
 const Psicologia = () => {
   const [imageValue, setImageValue] = useState("");
   const [titleValue, setTitleValue] = useState("");
@@ -48,7 +50,12 @@ const Psicologia = () => {
 
   return (
     <>
-      <h1 className="text-xl pl-2 mt-2  font-bold">Psicologia</h1>
+      <div className="flex justify-around mt-4">
+        <h1 className="text-xl pl-2 mt-2  font-bold">Psicologia</h1>
+        <Anchor to={"/post_editar"}>
+          <Button color="failure">Editar - Post </Button>
+        </Anchor>
+      </div>
       <div className="border-t-2 border-gray-400   my-4"></div>
 
       <div className="flex w-72 flex-col gap-6 mx-auto items-center">

@@ -54,7 +54,7 @@ const Noticias = () => {
       <div className="flex justify-around mt-4">
         <h1 className="text-xl pl-2 mt-2  font-bold">Noticias</h1>
         <Anchor to={"/noticias_editar"}>
-          <Button color="failure">Edit - Noticias</Button>
+          <Button color="failure">Editar - Noticias</Button>
         </Anchor>
       </div>
 

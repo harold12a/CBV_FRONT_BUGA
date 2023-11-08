@@ -37,7 +37,7 @@ export const CardViewEdit = ({ _id, title, date, image, description }) => {
       if (result.isConfirmed) {
         try {
           axios.delete(apiUrl + `/noticias/${id}`, headers()).then(() => {
-            Swal.fire("Emilianda!", "Su noticia a sido eliminada.", "success");
+            Swal.fire("Eliminada!!", "Su noticia a sido eliminada.", "success");
           });
         } catch (error) {
           Swal.fire({

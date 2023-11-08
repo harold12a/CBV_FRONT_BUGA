@@ -11,25 +11,27 @@ import headers from "../../api/headers";
 import { useEffect, useState } from "react";
 import { CardViewEdit } from "./CardViewEdit";
 
-export const Card = () => {
-  const [noticias, setNoticias] = useState([]);
-
+export const CardExtintoresEdit = () => {
+  const [extinguisher, setExtinguisher] = useState([]);
   useEffect(() => {
     try {
-      axios.get(apiUrl + "/noticias", headers()).then((res) => {
-        setNoticias(res.data.response);
+      axios.get(apiUrl + "/extintor", headers()).then((res) => {
+        setExtinguisher(res.data.response);
+        // console.log(res.data.response);
       });
     } catch (error) {
       error;
+      //   console.log(error);
     }
   }, []);
   return (
     <>
-      <Typography variant="h4" className=" font-bold pl-2 mt-4 text-center ">
-        Panel para editar o eliminar una noticia
+      <Typography variant="h5" className=" font-bold pl-2 mt-2 mb-4 ">
+        Extintores
       </Typography>
-      <div className="border-t-2 border-gray-400   my-4"></div>
-      {/* Noticias */}
+
+      <div className="border-t-2 border-gray-400  my-4 "></div>
+
       <Swiper
         slidesPerView={"auto"}
         centeredSlides={true}
@@ -40,16 +42,15 @@ export const Card = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {noticias.map((each) => (
+        {extinguisher.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[14vh] mb-[50px]  relative"
+            className="bg-gray-100 border-4 border-gray-800 drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[14vh] mb-[30px]  relative"
           >
             <CardViewEdit
               _id={each._id.toString()}
-              title={each.title}
-              date={each.date}
-              description={each.description}
+              extinguisher={each.extinguisher}
+              price={each.price}
               image={each.image}
             />
           </SwiperSlide>

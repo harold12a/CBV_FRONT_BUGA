@@ -11,39 +11,37 @@ import headers from "../../api/headers";
 import { useEffect, useState } from "react";
 import { CardViewEdit } from "./CardViewEdit";
 
-export const Card = () => {
-  const [noticias, setNoticias] = useState([]);
-
+export const CardCourseEdit = () => {
+  const [courses, setCourses] = useState([]);
   useEffect(() => {
     try {
-      axios.get(apiUrl + "/noticias", headers()).then((res) => {
-        setNoticias(res.data.response);
+      axios.get(apiUrl + "/cursos", headers()).then((res) => {
+        setCourses(res.data.response);
+        // console.log(res.data.response);
       });
     } catch (error) {
       error;
+      console.log(error);
     }
   }, []);
   return (
     <>
       <Typography variant="h4" className=" font-bold pl-2 mt-4 text-center ">
-        Panel para editar o eliminar una noticia
+        Panel para editar o eliminar un curso
       </Typography>
-      <div className="border-t-2 border-gray-400   my-4"></div>
-      {/* Noticias */}
+      <div className="border-t-2 border-gray-400  my-4 "></div>
       <Swiper
-        slidesPerView={"auto"}
-        centeredSlides={true}
-        spaceBetween={30}
+        direction={"vertical"}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="h-[70vh]"
       >
-        {noticias.map((each) => (
+        {courses.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[14vh] mb-[50px]  relative"
+            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl   "
           >
             <CardViewEdit
               _id={each._id.toString()}
@@ -51,6 +49,8 @@ export const Card = () => {
               date={each.date}
               description={each.description}
               image={each.image}
+              price={each.price}
+              timeofCurse={each.timeofCurse}
             />
           </SwiperSlide>
         ))}

@@ -6,11 +6,13 @@ import { Typography } from "@material-tailwind/react";
 
 export const ExtinguisherView = ({ extinguisher, price, image }) => {
   // Formatear el precio como una cadena con separador de miles
-  const formattedPrice = price.toLocaleString("es-ES", {
-    style: "currency",
-    currency: "COP", // Cambia a tu moneda si es diferente
-    minimumFractionDigits: 3, // Número de decimales
-  });
+  let formattedPrice = price;
+  if (price !== null && typeof price === "number") {
+    // Formatear el precio como una cadena con separador de miles
+    formattedPrice = price.toLocaleString("es-CO", {
+      minimumFractionDigits: 3,
+    });
+  }
 
   return (
     <>

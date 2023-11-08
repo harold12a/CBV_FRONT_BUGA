@@ -19,6 +19,10 @@ import { Inspection } from "../services/Inspection";
 import { Training } from "../services/Training";
 import { TrainingView } from "../services/TrainingView";
 import { Card } from "./EditNoticias/Card";
+import { CardCourseEdit } from "./EditCursos/CardCourseEdit";
+import { CardPostEdit } from "./EditPost/CardPostEdit";
+import { CardExtintoresEdit } from "./EditExtintores/CardExtintoresEdit";
+import { CardCapacitacionEdit } from "./EditCapacitaciones/CardCapacitacionEdit";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +69,10 @@ const router = createBrowserRouter([
       { path: "/capacitaciones", element: <Training /> },
       { path: "/capacitaciones/:_id", element: <TrainingView /> },
       { path: "/noticias_editar", element: <Card /> },
+      { path: "/cursos_editar", element: <CardCourseEdit /> },
+      { path: "/post_editar", element: <CardPostEdit /> },
+      { path: "/extintores_editar", element: <CardExtintoresEdit /> },
+      { path: "/capacitaciones_editar", element: <CardCapacitacionEdit /> },
     ],
   },
 ]);

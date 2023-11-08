@@ -4,20 +4,17 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 // import required modules
 import { Pagination } from "swiper/modules";
-import { Typography } from "@material-tailwind/react";
 import axios from "axios";
 import apiUrl from "../../api/apiUrl";
 import headers from "../../api/headers";
 import { useEffect, useState } from "react";
 import { CardViewEdit } from "./CardViewEdit";
-
-export const Card = () => {
-  const [noticias, setNoticias] = useState([]);
-
+export const CardPostEdit = () => {
+  const [post, setPost] = useState([]);
   useEffect(() => {
     try {
-      axios.get(apiUrl + "/noticias", headers()).then((res) => {
-        setNoticias(res.data.response);
+      axios.get(apiUrl + "/post", headers()).then((res) => {
+        setPost(res.data.response);
       });
     } catch (error) {
       error;
@@ -25,25 +22,23 @@ export const Card = () => {
   }, []);
   return (
     <>
-      <Typography variant="h4" className=" font-bold pl-2 mt-4 text-center ">
-        Panel para editar o eliminar una noticia
-      </Typography>
-      <div className="border-t-2 border-gray-400   my-4"></div>
-      {/* Noticias */}
+      <h1 className="text-xl pl-2 mt-2 font-bold uppercase text-center">
+        Psicologia
+      </h1>
+      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
+
       <Swiper
-        slidesPerView={"auto"}
-        centeredSlides={true}
-        spaceBetween={30}
+        direction={"vertical"}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="h-[70vh]"
       >
-        {noticias.map((each) => (
+        {post.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[14vh] mb-[50px]  relative"
+            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[0vh]  "
           >
             <CardViewEdit
               _id={each._id.toString()}
