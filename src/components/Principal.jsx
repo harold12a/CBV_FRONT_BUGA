@@ -1,51 +1,15 @@
 import { MdOutlinePhoneIphone } from "react-icons/md";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 // import required modules
-import { Pagination } from "swiper/modules";
 import { Typography } from "@material-tailwind/react";
-import axios from "axios";
-import apiUrl from "../api/apiUrl";
-import headers from "../api/headers";
-import { useEffect, useState } from "react";
-import { CardNoticias } from "../pages/CardNoticias";
-import { CardCourse } from "../pages/CardCourse";
-import { Link as Anchor } from "react-router-dom";
-import { Button } from "@mui/material";
+import { ViewNoticia } from "./Noticias/ViewNoticia";
+import { ViewCursos } from "./Cursos/ViewCursos";
+import { ViewComponent } from "./Psicologia/ViewComponent";
+import { ViewCapacitacion } from "./Capacitaciones/ViewCapacitacion";
+import { ViewExtintores } from "./Extintores/ViewExtintores";
+import { ViewAmbulancia } from "./Ambulancia/ViewAmbulancia";
+import { ViewInspeccion } from "./Inspeccion.jsx/ViewInspeccion";
 
 const Principal = () => {
-  const [noticias, setNoticias] = useState([]);
-  const [courses, setCourses] = useState([]);
-
-  // useEffect noticias
-  useEffect(() => {
-    try {
-      axios.get(apiUrl + "/noticias", headers()).then((res) => {
-        setNoticias(res.data.response);
-        // console.log(res.data.response);
-      });
-    } catch (error) {
-      error;
-      console.log(error);
-    }
-  }, []);
-
-  // useEffect cursos
-
-  useEffect(() => {
-    try {
-      axios.get(apiUrl + "/cursos", headers()).then((res) => {
-        setCourses(res.data.response);
-        // console.log(res.data.response);
-      });
-    } catch (error) {
-      error;
-      console.log(error);
-    }
-  }, []);
-
   return (
     <>
       <img
@@ -53,14 +17,12 @@ const Principal = () => {
         src="/public/images/flame1.jpg"
         alt="nature image"
       />
-
       <div className=" bg-white border-4 border-white drop-shadow-xl text-center text-m underline h-[6vh] mx-auto mt-[5vh] mb-3 flex  justify-center ">
         <MdOutlinePhoneIphone className="text-3xl  " />
         <h1 className="mt-1 font-mono  font-semibold text-xl">
           linea de emergencia 119
         </h1>
       </div>
-
       <div
         id="default-carousel"
         className="relative w-full"
@@ -179,183 +141,32 @@ const Principal = () => {
           </span>
         </button>
       </div>
-      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
-        Noticias
-      </Typography>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       {/* Noticias */}
-      <Swiper
-        slidesPerView={"auto"}
-        centeredSlides={true}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        {noticias.map((each) => (
-          <SwiperSlide
-            key={each._id.toString()}
-            className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[14vh] mb-[30px]  relative"
-          >
-            <CardNoticias
-              _id={each._id.toString()}
-              title={each.title}
-              date={each.date}
-              description={each.description}
-              image={each.image}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      {/* Cursos */}
-      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
-        Cursos
-      </Typography>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
+      <ViewNoticia />
 
-      <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="h-[70vh]"
-      >
-        {courses.map((each) => (
-          <SwiperSlide
-            key={each._id.toString()}
-            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[-3.8vh]  "
-          >
-            <CardCourse
-              _id={each._id.toString()}
-              title={each.title}
-              date={each.date}
-              description={each.description}
-              image={each.image}
-              price={each.price}
-              timeofCurse={each.timeofCurse}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
-        Psicologia
-      </Typography>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <a
-        href="#"
-        className="flex  flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-      >
-        <img
-          className="object-cover w-[75%] rounded-t-lg h-[55%] md:h-auto md:w-48 md:rounded-none md:rounded-l-lg mt-4"
-          src="/public/images/jessica.jpg"
-          alt="jessica-img"
-        />
-        <div className="flex flex-col mt-4 text-center">
-          <Typography variant="h4" className=" font-bold">
-            Jessica Tatiana Betancourth
-          </Typography>
-          <Typography variant="h6" className=" font-bold mb-4" color="gray">
-            Especialista en Atentcion Psicosocial
-          </Typography>
-          <Anchor to={"/post_view"}>
-            <Button
-              variant="contained"
-              size="lg"
-              fullWidth={true}
-              className="mb-3"
-            >
-              Ver mas
-            </Button>
-          </Anchor>
-        </div>
-      </a>
+      {/* Cursos */}
+      <ViewCursos />
+
+      {/* Psicologia */}
+      <ViewComponent />
+
       <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
         Servicios
       </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <Typography variant="h5" className=" font-bold pl-2 mt-2 mb-4 ">
-        Extintores
-      </Typography>
-      <figure className="relative h-96 w-full">
-        <img
-          className="h-full w-full rounded-xl object-cover object-center"
-          src="/public/images/extintores1.jpeg"
-          alt="nature image"
-        />
-        <figcaption className="absolute bottom-8 left-[225px]  ">
-          <Anchor to={"/servicios_extintores"}>
-            <button
-              type="button"
-              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              Comprar
-            </button>
-          </Anchor>
-        </figcaption>
-      </figure>
-      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
-        Capacitaciones
-      </Typography>
-      <figure className="relative h-96 w-full">
-        <img
-          className="h-full w-full rounded-xl object-cover object-center"
-          src="/public/images/capacitaciones.jpg"
-          alt="nature image"
-        />
-        <figcaption className="absolute bottom-8 left-[225px]  ">
-          <Anchor to={"/capacitaciones"}>
-            <button
-              type="button"
-              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              Solicitar
-            </button>
-          </Anchor>
-        </figcaption>
-      </figure>
-      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
-        Ambulancia
-      </Typography>
-      <figure className="relative h-96 w-full">
-        <img
-          className="h-full w-full rounded-xl object-cover object-center"
-          src="/public/images/ambulancia.jpeg"
-          alt="nature image"
-        />
-        <figcaption className="absolute bottom-8 left-[225px]  ">
-          <Anchor to={"/servicios_ambulancia"}>
-            <button
-              type="button"
-              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              Solicitar
-            </button>
-          </Anchor>
-        </figcaption>
-      </figure>
-      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
-        Inspecciones
-      </Typography>
-      <figure className="relative h-96 w-full">
-        <img
-          className="h-full w-full rounded-xl object-cover object-center"
-          src="/public/images/inspeccion.jpg"
-          alt="nature image"
-        />
-        <figcaption className="absolute bottom-8 left-[225px]  ">
-          <Anchor to={"/servicios_inspecciones"}>
-            <button
-              type="button"
-              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              Solicitar
-            </button>
-          </Anchor>
-        </figcaption>
-      </figure>
+      {/* Extintores */}
+      <ViewExtintores />
+
+      {/* Capacitaciones */}
+      <ViewCapacitacion />
+
+      {/* Ambulancia */}
+
+      <ViewAmbulancia />
+
+      {/* Inspecciones */}
+      <ViewInspeccion />
+
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63690.244145155586!2d-76.29217369022544!3d3.887047383819724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbomberos%20buga!5e0!3m2!1ses!2sco!4v1696704166269!5m2!1ses!2sco"

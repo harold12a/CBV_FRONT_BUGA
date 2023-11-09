@@ -23,6 +23,13 @@ import { CardCourseEdit } from "./EditCursos/CardCourseEdit";
 import { CardPostEdit } from "./EditPost/CardPostEdit";
 import { CardExtintoresEdit } from "./EditExtintores/CardExtintoresEdit";
 import { CardCapacitacionEdit } from "./EditCapacitaciones/CardCapacitacionEdit";
+import { ViewNoticia } from "../components/Noticias/ViewNoticia";
+import { ViewCursos } from "../components/Cursos/ViewCursos";
+import { ViewComponent } from "../components/Psicologia/ViewComponent";
+import { ViewCapacitacion } from "../components/Capacitaciones/ViewCapacitacion";
+import { ViewExtintores } from "../components/Extintores/ViewExtintores";
+import { ViewAmbulancia } from "../components/Ambulancia/ViewAmbulancia";
+import { ViewInspeccion } from "../components/Inspeccion.jsx/ViewInspeccion";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +40,14 @@ const router = createBrowserRouter([
       { path: "/register", element: <Register /> },
       { path: "/ingresar", element: <SignIn /> },
       { path: "/botones", element: <Buttons /> },
+      { path: "/noticias", element: <ViewNoticia /> },
+      { path: "/cursos", element: <ViewCursos /> },
+      { path: "/psicologia", element: <ViewComponent /> },
+      { path: "/capacitaciones", element: <ViewCapacitacion /> },
+      { path: "/extintores", element: <ViewExtintores /> },
+      { path: "/ambulancia", element: <ViewAmbulancia /> },
+      { path: "/inspeccion", element: <ViewInspeccion /> },
+
       {
         path: "/schema",
         element: <Schema />,
