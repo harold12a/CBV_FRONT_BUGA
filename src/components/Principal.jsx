@@ -8,28 +8,70 @@ import { ViewCapacitacion } from "./Capacitaciones/ViewCapacitacion";
 import { ViewExtintores } from "./Extintores/ViewExtintores";
 import { ViewAmbulancia } from "./Ambulancia/ViewAmbulancia";
 import { ViewInspeccion } from "./Inspeccion.jsx/ViewInspeccion";
+import { Card } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 
 const Principal = () => {
   return (
     <>
-      <img
-        className="h-96 w-full  object-cover object-center"
-        src="/public/images/flame1.jpg"
-        alt="nature image"
-      />
+      <div className="flex justify-between">
+        <div className="xl:block hidden">
+          <iframe
+            className=" w-[600px] h-96 ml-4 rounded-lg  shadow-xl"
+            src="https://www.youtube.com/embed/R-TNTVHvM3c"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <div className="flex justify-center mt-[25%] drop-shadow-2xl">
+            <Card
+              className="max-w-sm"
+              renderImage={() => (
+                <img
+                  width={500}
+                  height={500}
+                  src="/public/images/equipoBombero.jpg"
+                  alt="image 1"
+                />
+              )}
+            >
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+                Sabe usted cuanto vale equipar a una unidad bomberil ?
+              </h5>
+            </Card>
+          </div>
+        </div>
+        <img
+          className="xl:object-none xl:object-right-top xl:h-[1096px] xl:w-full xl:mr-4  h-96 w-full  object-cover object-center md:object-cover md:h-auto md:w-full"
+          src="/public/images/flame1.jpg"
+          alt="nature image"
+        />
+      </div>
+
       <div className=" bg-white border-4 border-white drop-shadow-xl text-center text-m underline h-[6vh] mx-auto mt-[5vh] mb-3 flex  justify-center ">
         <MdOutlinePhoneIphone className="text-3xl  " />
         <h1 className="mt-1 font-mono  font-semibold text-xl">
           linea de emergencia 119
         </h1>
       </div>
-      <div
+      <div className="h-56 sm:h-64 xl:h-80 2xl:h-[600px] md:h-[500px]">
+        <Carousel>
+          <img src="/public/images/carousel1.jpg" alt="..." />
+          <img src="/public/images/carouse2.jpg" alt="..." />
+          <img src="/public/images/carouse3.jpg" alt="..." />
+        </Carousel>
+      </div>
+      {/* <div
         id="default-carousel"
         className="relative w-full"
         data-carousel="slide"
       >
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div className="relative h-56 xl:h-[600px] xl:w-full overflow-hidden rounded-lg md:h-96">
+          <div
+            className="hidden duration-700 ease-in-out object-fill h-screen w-full "
+            data-carousel-item
+          >
             <img src="/public/images/carousel1.jpg" alt="..." />
           </div>
 
@@ -140,7 +182,7 @@ const Principal = () => {
             <span className="sr-only">Next</span>
           </span>
         </button>
-      </div>
+      </div> */}
       {/* Noticias */}
       <ViewNoticia />
 

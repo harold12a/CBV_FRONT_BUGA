@@ -50,7 +50,7 @@ const NavBar = () => {
     { to: "/ambulancia", title: "Ambulancia" },
     { to: "/inspeccion", title: "Inspecciones" },
     { to: "/psicologia", title: "Salud Mental" },
-    { to: "/register", title: "Registrarse" },
+    // { to: "/register", title: "Registrarse" },
     { to: "/ingresar", title: "Ingresar" },
   ]);
 
@@ -72,7 +72,7 @@ const NavBar = () => {
         { to: "/ambulancia", title: "Ambulancia" },
         { to: "/inspeccion", title: "Inspecciones" },
         { to: "/psicologia", title: "Salud Mental" },
-        { to: "/register", title: "Registrase" },
+        // { to: "/register", title: "Registrase" },
         { to: "/ingresar", title: "Ingresar" },
       ]);
     }
@@ -91,6 +91,9 @@ const NavBar = () => {
           choice for your.
         </div>
       </Blockquote>
+      <Blockquote className="bg-black text-white xl:hidden block ">
+        <div className="text-center">Flowbite is just awesome</div>
+      </Blockquote>
       <div className="flex justify-center mt-2 ">
         <img
           src="/public/images/BannerNavabar.png"
@@ -101,8 +104,8 @@ const NavBar = () => {
       <div className="border border-black   my-4 mr-[12.5%]  ml-[12.5%]"></div>
       <Navbar fluid rounded>
         <Navbar.Brand>
-          <Anchor to="/" className="flex items-center">
-            <HiHome className="text-xl mr-2" />
+          <Anchor to="/" className="flex items-center ">
+            <HiHome className="text-4xl mr-4  md:hidden xl:block" />
             {/* <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white hidden xl:block">
               Bomberos Buga
             </span> */}
@@ -136,7 +139,7 @@ const NavBar = () => {
         ) : (
           <div className="flex md:order-2  ">
             <Anchor to="/ingresar">
-              <HiOutlineUserCircle className="text-4xl ml-[260px] xl:ml-0 " />
+              <HiOutlineUserCircle className="text-4xl ml-[260px] xl:ml-0 md:hidden " />
             </Anchor>
           </div>
         )}
@@ -152,7 +155,7 @@ const NavBar = () => {
               onClick={option?.onClick}
               key={index}
               to={option?.to}
-              className="block mb-3"
+              className="block mb-3  md:mr-[-15px] "
             >
               {option?.title}
             </Anchor>
