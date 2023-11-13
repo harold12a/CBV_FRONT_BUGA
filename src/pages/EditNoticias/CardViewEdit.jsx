@@ -50,11 +50,11 @@ export const CardViewEdit = ({ _id, title, date, image, description }) => {
   return (
     <>
       <img
-        className="h-64 w-[93%] rounded-full object-cover object-center absolute mt-[28px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className="h-64 w-[93%] rounded-full md:rounded-lg object-cover object-center absolute mt-[28px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         src={image}
         alt="nature image"
       />
-      <div className="mt-[23vh]">
+      <div className=" xl:mt-[23vh] md:mt-[15vh] mt-[23vh] ">
         <h1 className="text-center"> {title}</h1>
         <p className="mt-1 mb-4 text-center">{formattedDate}</p>
         <Anchor to={`/noticias_vista/${_id}`}>

@@ -17,11 +17,11 @@ export const ExtinguisherView = ({ extinguisher, price, image }) => {
   return (
     <>
       <img
-        className="h-64 w-[93%] rounded-[20%] object-cover object-center absolute mt-[28px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl"
+        className=" xl:h-80 h-68 w-[93%] object-contain  rounded-full md:rounded-lg xl:rounded-lg  object-center absolute mt-[28px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         src={image}
         alt="nature image"
       />
-      <div className="mt-[24vh]  ">
+      <div className="mt-[23vh] xl:mt-[26vh] md:mt-[27vh]  ">
         <Typography
           variant="h5"
           className=" font-bold text-center"
@@ -30,11 +30,8 @@ export const ExtinguisherView = ({ extinguisher, price, image }) => {
         <Typography variant="h6" className=" font-bold mt-1 mb-4 text-center">
           $ {formattedPrice}
         </Typography>
-
-        <Anchor
-        //   to={`/noticias_vista/${_id}`}
-        >
-          <div className="flex justify-center ">
+        <Anchor>
+          <div className="flex justify-center xl:mt-[-5%] ">
             <Button color="failure">Comprar</Button>
           </div>
         </Anchor>

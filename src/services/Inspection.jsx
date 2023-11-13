@@ -81,14 +81,6 @@ export const Inspection = () => {
           Borrar Todos los Campos
         </button>
       </div>
-      <div className="mt-4 mb-2">
-        <h1 className="ml-6 font-bold">Contacto</h1>
-        <p className="mt-1 ml-6">Tel: 123456</p>
-      </div>
-      <div className="mt-2">
-        <h1 className="ml-6 font-bold">Direccion</h1>
-        <p className="mt-1 ml-6">calle 2 sur # 10-72</p>
-      </div>
     </>
   );
 };

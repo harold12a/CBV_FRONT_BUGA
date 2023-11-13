@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "/noticias",
+        path: "/noticias_crud",
         element: <Noticias />,
         loader: () => {
           let user = JSON.parse(localStorage.getItem("user"));
@@ -74,14 +74,14 @@ const router = createBrowserRouter([
       },
       { path: "/extintor", element: <Extintores /> },
       { path: "/capacitacion", element: <Capacitaciones /> },
-      { path: "/psicologia", element: <Psicologia /> },
+      { path: "/psicologia_crud", element: <Psicologia /> },
       { path: "/noticias_vista/:_id", element: <NotiView /> },
       { path: "/course_vista/:_id", element: <Courseview /> },
       { path: "/post_view", element: <CardPost /> },
       { path: "/servicios_extintores", element: <Extinguisher /> },
       { path: "/servicios_ambulancia", element: <Ambulance /> },
       { path: "/servicios_inspecciones", element: <Inspection /> },
-      { path: "/capacitaciones", element: <Training /> },
+      { path: "/capacitaciones_vista", element: <Training /> },
       { path: "/capacitaciones/:_id", element: <TrainingView /> },
       { path: "/noticias_editar", element: <Card /> },
       { path: "/cursos_editar", element: <CardCourseEdit /> },

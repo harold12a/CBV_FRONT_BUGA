@@ -1,4 +1,4 @@
-import { HiHome, HiOutlineUserCircle } from "react-icons/hi";
+import { HiOutlineUserCircle } from "react-icons/hi";
 import { Link as Anchor } from "react-router-dom";
 import axios from "axios";
 import apiUrl from "../api/apiUrl";
@@ -105,15 +105,12 @@ const NavBar = () => {
       <Navbar fluid rounded>
         <Navbar.Brand>
           <Anchor to="/" className="flex items-center ">
-            <HiHome className="text-4xl mr-4  md:hidden xl:block" />
-            {/* <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white hidden xl:block">
-              Bomberos Buga
-            </span> */}
+            {/* <HiHome className="text-4xl mr-4  md:hidden xl:block" /> */}
           </Anchor>
         </Navbar.Brand>
         {user_id ? (
           <>
-            <div className="flex md:order-2">
+            <div className="flex md:order-2 ml-[45%]">
               <Dropdown
                 arrowIcon={false}
                 inline
@@ -125,15 +122,11 @@ const NavBar = () => {
                     {email}
                   </span>
                 </Dropdown.Header>
-                {/* <Dropdown.Item>Dashboard</Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
-                <Dropdown.Item>Earnings</Dropdown.Item> */}
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={signout}>
                   Salir del panel de Administracion{" "}
                 </Dropdown.Item>
               </Dropdown>
-              {/* <Navbar.Toggle /> */}
             </div>
           </>
         ) : (

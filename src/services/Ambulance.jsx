@@ -17,12 +17,11 @@ export const Ambulance = () => {
           alt="nature image"
         />
       </div>
-      <div className="mt-[2vh]">
-        <Typography
-          variant="h5"
-          className=" font-bold text-center"
-        ></Typography>
-        <h1 className="text-center text-2xl"> Datos Generales</h1>
+
+      <div className="mt-[4vh]">
+        <Typography variant="h5" className=" font-bold text-center">
+          Datos Generales
+        </Typography>
         <Typography variant="h6" className=" font-bold mt-1 mb-4 text-center">
           Ingrese todos los datos requeridos
         </Typography>
@@ -30,12 +29,10 @@ export const Ambulance = () => {
       <div className="flex w-72 flex-col gap-6 mx-auto items-center">
         <Input color="blue" label="Nombre" />
         <Input color="blue" label="Telefono" />
-        <Input color="purple" label="Email" type="text" />
         <Input color="purple" label="Desde" type="text" />
         <Input color="purple" label="Hasta" type="text" />
         <Input color="indigo" label="Fecha" type="date" />
         <Input color="purple" label="Informacion Adicional" type="text" />
-        <Input color="blue" label="Valor del Curso Federados" />
       </div>
       <div className="flex flex-col w-72 mx-auto justify-center mt-5">
         <button
@@ -50,22 +47,6 @@ export const Ambulance = () => {
         >
           Borrar Todos los Campos
         </button>
-      </div>
-      <div className="mt-4 mb-2">
-        <h1 className="ml-6 font-bold">Contacto</h1>
-        <p className="mt-1 ml-6">Tel: 123456</p>
-      </div>
-      <div className="mt-2">
-        <h1 className="ml-6 font-bold">Direccion</h1>
-        <p className="mt-1 ml-6">calle 2 sur # 10-72</p>
-      </div>
-      <div className="mt-2">
-        <h1 className="ml-6 font-bold">Precio Municipal </h1>
-        <p className="mt-1 ml-6"> $ 150.000</p>
-      </div>
-      <div className="mt-2 mb-5">
-        <h1 className="ml-6 font-bold">Precio Valle </h1>
-        <p className="mt-1 ml-6"> $ 350.000</p>
       </div>
     </>
   );

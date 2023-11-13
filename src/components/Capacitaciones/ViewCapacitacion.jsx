@@ -13,7 +13,7 @@ export const ViewCapacitacion = () => {
         imgAlt="Meaningful alt text for an image that is not purely decorative"
         imgSrc="/public/images/capacitaciones.jpg"
       >
-        <Anchor to={"/capacitaciones"}>
+        <Anchor to={"/capacitaciones_vista"}>
           <div className="flex justify-center">
             <Button color="failure">Solicitar</Button>
           </div>

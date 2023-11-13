@@ -1,4 +1,3 @@
-import { Typography } from "@material-tailwind/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,14 +10,16 @@ import headers from "../api/headers";
 import { useEffect, useState } from "react";
 // import { Link as Anchor } from "react-router-dom";
 import { TrainingCard } from "./TrainingCard";
+import { Card } from "flowbite-react";
+import Container from "@mui/material/Container";
 export const Training = () => {
   const [training, setTraining] = useState([]);
-  console.log("training", training);
+  // console.log("training", training);
   useEffect(() => {
     try {
       axios.get(apiUrl + "/capacitaciones", headers()).then((res) => {
         setTraining(res.data.response);
-        console.log(res.data.response);
+        // console.log(res.data.response);
       });
     } catch (error) {
       error;
@@ -27,35 +28,49 @@ export const Training = () => {
   }, []);
   return (
     <>
-      <Typography variant="h5" className=" font-bold pl-2 mt-2 mb-4 ">
-        Capacitaciones
-      </Typography>
-      <div className="border-t-2 border-gray-400 w-80 my-4"></div>
-      <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="h-[70vh]"
-      >
-        {training.map((each) => (
-          <SwiperSlide
-            key={each._id.toString()}
-            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[-2.2vh]  "
+      <div className="flex xl:justify-between mt-2">
+        <div className="xl:block md:block hidden mt-36 ml-10 ">
+          <Card href="#" className="max-w-sm">
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+              Pasión por el Servicio
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400 ">
+              Descubre el héroe que llevas dentro. Con nuestro curso de
+              bomberos, no solo adquirirás las habilidades necesarias para
+              salvar vidas y proteger comunidades, sino que también
+              desbloquearás tu propio potencial heroico.
+            </p>
+          </Card>
+        </div>
+
+        <Container maxWidth="lg">
+          <Swiper
+            direction={"vertical"}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="h-[70vh]"
           >
-            <TrainingCard
-              _id={each._id.toString()}
-              title={each.title}
-              date={each.date}
-              description={each.description}
-              image={each.image}
-              price={each.price}
-              timeofTraining={each.timeofTraining}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            {training.map((each) => (
+              <SwiperSlide
+                key={each._id.toString()}
+                className="  xl:bg-blue-gray-300 rounded-lg  xl:ml-48  "
+              >
+                <TrainingCard
+                  _id={each._id.toString()}
+                  title={each.title}
+                  date={each.date}
+                  description={each.description}
+                  image={each.image}
+                  price={each.price}
+                  timeofTraining={each.timeofTraining}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
+      </div>
     </>
   );
 };

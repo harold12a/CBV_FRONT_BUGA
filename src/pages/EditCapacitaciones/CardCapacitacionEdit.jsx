@@ -37,12 +37,12 @@ export const CardCapacitacionEdit = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="h-[70vh]"
+        className="h-[70vh] xl:h-[80vh]"
       >
         {training.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[-2.2vh]  "
+            className=" rounded-2xl  mb-[-2.2vh] xl:mx-[35%] xl:mt-4  "
           >
             <CardViewEdit
               _id={each._id.toString()}

@@ -51,7 +51,7 @@ export const Extinguisher = () => {
         {extinguisher.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-gray-100 border-4 border-gray-800 drop-shadow-2xl rounded-2xl h-[45vh] w-[60vw] mt-[14vh] mb-[30px]  relative"
+            className="bg-gray-100 border-4 border-gray-800 drop-shadow-2xl rounded-2xl h-[40vh] w-[60vw] xl:w-[45vh] md:w-[38vh] md:mt-[24vh] mt-[14vh] xl:mb-[80px] mb-[30px] xl:mt-36  relative"
           >
             <ExtinguisherView
               _id={each._id.toString()}
@@ -62,45 +62,46 @@ export const Extinguisher = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
-        Informacion
-      </Typography>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <div className="mt-2">
-        <Typography variant="h5" className="pl-2 font-bold">
-          Horaios de Atencion
+      <div className="xl:hidden md:hidden block">
+        <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4 ">
+          Informacion
         </Typography>
-        <Typography variant="h6" className="pl-2 font-bold" color="gray">
-          Lunes, Martes, Miercoles, Jueves y viernes
+        <div className="border-t-2 border-gray-400 w-80  my-4"></div>
+        <div className="mt-2">
+          <Typography variant="h5" className="pl-2 font-bold">
+            Horaios de Atencion
+          </Typography>
+          <Typography variant="h6" className="pl-2 font-bold" color="gray">
+            Lunes, Martes, Miercoles, Jueves y viernes
+          </Typography>
+          <Typography variant="h6" className="pl-2 font-bold">
+            8:00 am - 12:00 pm / 2:00 pm - 6:00pm
+          </Typography>
+          <Typography variant="h6" className="pl-2 font-bold" color="gray">
+            Sabados
+          </Typography>
+          <Typography variant="h6" className="pl-2 font-bold">
+            8:00 am - 12:00 pm
+          </Typography>
+          <Typography variant="h6" className="pl-2 font-bold" color="gray">
+            Domingos
+          </Typography>
+          <Typography variant="h6" className="pl-2 font-bold">
+            24 horas - Guardia
+          </Typography>
+        </div>
+        <Typography variant="h5" className=" font-bold pl-2 mt-4 mb-4 ">
+          Contacto
         </Typography>
-        <Typography variant="h6" className="pl-2 font-bold">
-          8:00 am - 12:00 pm / 2:00 pm - 6:00pm
-        </Typography>
-        <Typography variant="h6" className="pl-2 font-bold" color="gray">
-          Sabados
-        </Typography>
-        <Typography variant="h6" className="pl-2 font-bold">
-          8:00 am - 12:00 pm
-        </Typography>
-        <Typography variant="h6" className="pl-2 font-bold" color="gray">
-          Domingos
-        </Typography>
-        <Typography variant="h6" className="pl-2 font-bold">
-          24 horas - Guardia
-        </Typography>
-      </div>
-      <Typography variant="h5" className=" font-bold pl-2 mt-4 mb-4 ">
-        Contacto
-      </Typography>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <div className="mt-2">
-        <Typography variant="h6" className="pl-2 font-bold " color="gray">
-          Telefono: 123456789
-        </Typography>
-        <Typography variant="h6" className="pl-2 font-bold" color="gray">
-          WhatsApp: 12345678
-        </Typography>
+        <div className="border-t-2 border-gray-400 w-80  my-4"></div>
+        <div className="mt-2">
+          <Typography variant="h6" className="pl-2 font-bold " color="gray">
+            Telefono: 123456789
+          </Typography>
+          <Typography variant="h6" className="pl-2 font-bold" color="gray">
+            WhatsApp: 12345678
+          </Typography>
+        </div>
       </div>
     </>
   );
