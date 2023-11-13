@@ -10,6 +10,7 @@ import { ViewAmbulancia } from "./Ambulancia/ViewAmbulancia";
 import { ViewInspeccion } from "./Inspeccion.jsx/ViewInspeccion";
 import { Card } from "flowbite-react";
 import { Carousel } from "flowbite-react";
+import Container from "@mui/material/Container";
 
 const Principal = () => {
   return (
@@ -186,39 +187,53 @@ const Principal = () => {
       {/* Noticias */}
       <ViewNoticia />
 
+      <div></div>
       {/* Cursos */}
       <ViewCursos />
 
       {/* Psicologia */}
       <ViewComponent />
 
-      <Typography variant="h4" className=" font-bold pl-2 mt-4 ">
+      <Typography
+        variant="h4"
+        className="font-bold pl-4 mt-4 md:pl-8 md:text-[40px] "
+      >
         Servicios
       </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      {/* Extintores */}
-      <ViewExtintores />
+      <div className=" xl:flex xl:justify-around md:grid md:grid-cols-2 md:gap-2 ">
+        {/* Extintores */}
+        <Container maxWidth="sm">
+          <ViewExtintores />
+        </Container>
 
-      {/* Capacitaciones */}
-      <ViewCapacitacion />
+        {/* Capacitaciones */}
+        <Container maxWidth="sm">
+          <ViewCapacitacion />
+        </Container>
 
-      {/* Ambulancia */}
+        {/* Ambulancia */}
+        <Container maxWidth="sm">
+          <ViewAmbulancia />
+        </Container>
 
-      <ViewAmbulancia />
+        {/* Inspecciones */}
+        <Container maxWidth="sm">
+          <ViewInspeccion />
+        </Container>
+      </div>
 
-      {/* Inspecciones */}
-      <ViewInspeccion />
-
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63690.244145155586!2d-76.29217369022544!3d3.887047383819724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbomberos%20buga!5e0!3m2!1ses!2sco!4v1696704166269!5m2!1ses!2sco"
-        width="400"
-        height="300"
-        className="border-0"
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <div className="flex justify-center mt-10 ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63690.244145155586!2d-76.29217369022544!3d3.887047383819724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbomberos%20buga!5e0!3m2!1ses!2sco!4v1696704166269!5m2!1ses!2sco"
+          width="1000"
+          height="300"
+          className="border-0  rounded-lg "
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </>
   );
 };

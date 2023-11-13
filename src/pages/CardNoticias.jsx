@@ -12,13 +12,13 @@ export const CardNoticias = ({ _id, title, date, image }) => {
   return (
     <>
       <img
-        className=" xl:h-96 h-64 w-[93%]  rounded-full xl:rounded-lg xl:shadow-xl object-cover object-center absolute mt-[28px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className=" xl:h-96 h-64 w-[93%]  rounded-full xl:rounded-lg md:rounded-lg xl:shadow-xl object-cover object-center absolute mt-[28px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         src={image}
         alt="nature image"
       />
 
-      <div className="mt-[23vh] xl:mt-[35vh] md:mt-[17vh]">
-        <h1 className="text-center"> {title}</h1>
+      <div className="mt-[23vh] xl:mt-[33vh] md:mt-[17vh]">
+        <h1 className="text-center xl:text-lg"> {title}</h1>
         <p className="mt-1 mb-4 text-center">{formattedDate}</p>
         <Anchor to={`/noticias_vista/${_id}`} className="flex justify-center">
           <Button>Ver Mas</Button>

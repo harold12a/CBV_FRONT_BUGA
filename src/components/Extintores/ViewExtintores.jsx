@@ -1,28 +1,24 @@
 import { Typography } from "@material-tailwind/react";
 import { Link as Anchor } from "react-router-dom";
+import { Card } from "flowbite-react";
+import { Button } from "flowbite-react";
 export const ViewExtintores = () => {
   return (
     <>
-      <Typography variant="h5" className=" font-bold pl-2 mt-2 mb-4 ">
+      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4  ">
         Extintores
       </Typography>
-      <figure className="relative h-96 w-full">
-        <img
-          className="h-full w-full rounded-xl object-cover object-center"
-          src="/public/images/extintores1.jpeg"
-          alt="nature image"
-        />
-        <figcaption className="absolute bottom-8 left-[225px]  ">
-          <Anchor to={"/servicios_extintores"}>
-            <button
-              type="button"
-              className="py-2.5 px-5 underline mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              Comprar
-            </button>
-          </Anchor>
-        </figcaption>
-      </figure>
+      <Card
+        className="max-w-sm  "
+        imgAlt="Meaningful alt text for an image that is not purely decorative"
+        imgSrc="/public/images/extintores.webp"
+      >
+        <Anchor to={"/servicios_extintores"}>
+          <div className="flex justify-center">
+            <Button color="failure">Comprar</Button>
+          </div>
+        </Anchor>
+      </Card>
     </>
   );
 };

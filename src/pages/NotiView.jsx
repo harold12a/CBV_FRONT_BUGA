@@ -37,24 +37,6 @@ const NotiView = () => {
     <>
       <h1 className="text-xl pl-2 mt-2 font-bold">{noticia?.title}</h1>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      {/* <div className="mx-auto max-w-screen-xl px-4">
-        <img
-          className="h-96 w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50"
-          src={noticia?.image}
-          alt="nature image"
-        />
-      </div>
-      <div className="mt-2">
-        <h1 className="ml-6 font-bold">Fecha</h1>
-        <p className="mt-1 ml-6">{noticia?.date}</p>
-      </div>
-      <p className="mx-auto max-w-screen-xl px-4 mt-2">
-        {noticia?.description}
-      </p>
-      <div className="mx-auto max-w-screen-xl px-4 mt-4 ">
-        <h2 className="text-sm font-bold ">liena de emergencia</h2>
-        <h2>119</h2>
-      </div> */}
       <div className="flex justify-center">
         <Card sx={{ maxWidth: 735 }}>
           <CardActionArea>

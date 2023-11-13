@@ -1,14 +1,16 @@
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
+  // Card,
+  // CardHeader,
+  // CardBody,
   Typography,
-  IconButton,
+  // IconButton,
 } from "@material-tailwind/react";
 import { Button } from "@mui/material";
 import { Link as Anchor } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Card } from "flowbite-react";
+import Container from "@mui/material/Container";
+
 export const CardCourse = ({ _id, title, date, image }) => {
   // Formatear la fecha eliminando la parte "Z"
   const formattedDate = new Date(date).toLocaleString("es-ES", {
@@ -18,52 +20,24 @@ export const CardCourse = ({ _id, title, date, image }) => {
   });
   return (
     <>
-      <Card className="w-full max-w-[23.5rem] shadow-lg">
-        <CardHeader floated={false} color="blue-gray">
-          <img src={image} />
-          <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-          <IconButton
-            size="sm"
-            color="red"
-            variant="text"
-            className="!absolute top-4 right-4 rounded-full"
-          ></IconButton>
-        </CardHeader>
-        <CardBody>
-          <div className="mb-3 flex items-center justify-between">
-            <Typography variant="h5" color="blue-gray" className="font-medium">
-              {title}
+      <Container maxWidth="sm" className="xl:mt-[12%] md:mt-[2%]">
+        <Card className="max-w-sm xl:uppercase" imgSrc={image} horizontal>
+          <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+            {title}
+          </h5>
+          <p className="font-normal text-gray-700 dark:text-gray-400 mt-[-5%]">
+            <Typography color="gray" className="font-bold">
+              Inicio de curso
             </Typography>
-            <Typography
-              color="blue-gray"
-              className="flex items-center gap-1.5 font-normal"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="-mt-0.5 h-5 w-5 text-yellow-700"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              4.8
-            </Typography>
-          </div>
-          <Typography color="gray">Inicio de curso</Typography>
-          <Typography color="gray">{formattedDate}</Typography>
-        </CardBody>
-        <CardFooter className="pt-3">
-          <Anchor to={`/course_vista/${_id}`}>
-            <Button variant="contained" size="lg" fullWidth={true}>
-              Mas Informacion
-            </Button>
-          </Anchor>
-        </CardFooter>
-      </Card>
+            <Typography color="gray">{formattedDate}</Typography>
+            <Anchor to={`/course_vista/${_id}`}>
+              <Button variant="contained" size="lg" fullWidth={true}>
+                Mas Informacion
+              </Button>
+            </Anchor>
+          </p>
+        </Card>
+      </Container>
     </>
   );
 };
