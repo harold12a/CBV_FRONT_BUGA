@@ -35,8 +35,6 @@ const NotiView = () => {
   }, [_id]);
   return (
     <>
-      <h1 className="text-xl pl-2 mt-2 font-bold">{noticia?.title}</h1>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <div className="flex justify-center">
         <Card sx={{ maxWidth: 735 }}>
           <CardActionArea>

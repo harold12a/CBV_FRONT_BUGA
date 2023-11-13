@@ -10,7 +10,8 @@ import apiUrl from "../api/apiUrl";
 import headers from "../api/headers";
 import { useEffect, useState } from "react";
 import { PostView } from "./PostView";
-import { Typography } from "@material-tailwind/react";
+import { Card } from "flowbite-react";
+import Container from "@mui/material/Container";
 export const CardPost = () => {
   const [post, setPost] = useState([]);
   useEffect(() => {
@@ -26,51 +27,43 @@ export const CardPost = () => {
   }, []);
   return (
     <>
-      <h1 className="text-xl pl-2 mt-2 font-bold uppercase text-center">
-        Psicologia
-      </h1>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-
-      <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="h-[70vh]"
-      >
-        {post.map((each) => (
-          <SwiperSlide
-            key={each._id.toString()}
-            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl  mb-[0vh]  "
+      <div className="flex xl:justify-between mt-2">
+        <div className="xl:block md:block hidden mt-36 ml-10 ">
+          <Card href="#" className="max-w-sm">
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+              Arthur Schopenhauer
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400 ">
+              La felicidad nunca reside en posesiones, en dinero o en el
+              reconocimiento mundano. La verdadera dicha proviene de la
+              sabiduría interior y la renuncia a los deseos sin fin.
+            </p>
+          </Card>
+        </div>
+        <Container maxWidth="lg">
+          <Swiper
+            direction={"vertical"}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="h-[70vh]"
           >
-            <PostView
-              title={each.title}
-              date={each.date}
-              description={each.description}
-              image={each.image}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      <h1 className="text-xl pl-2 mt-2 font-bold uppercase text-center">
-        Contacto
-      </h1>
-      <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <div className="mt-2">
-        <Typography variant="h5" className="ml-6 font-bold">
-          Telefono
-        </Typography>
-        <Typography variant="h6" className="ml-7 font-bold" color="gray">
-          3117435713
-        </Typography>
-        <Typography variant="h5" className="ml-6 font-bold">
-          Email
-        </Typography>
-        <Typography variant="h6" className="ml-7 font-bold" color="gray">
-          jessica@gmail.com
-        </Typography>
+            {post.map((each) => (
+              <SwiperSlide
+                key={each._id.toString()}
+                className=" xl:bg-blue-gray-300 rounded-lg  xl:ml-48 "
+              >
+                <PostView
+                  title={each.title}
+                  date={each.date}
+                  description={each.description}
+                  image={each.image}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
       </div>
     </>
   );
