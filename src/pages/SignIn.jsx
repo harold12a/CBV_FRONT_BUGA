@@ -1,10 +1,10 @@
-import { Link as Anchor } from "react-router-dom";
 import { useRef } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
 import apiUrl from "../api/apiUrl";
 import Swal from "sweetalert2";
+import { Typography } from "@material-tailwind/react";
 
 const SindIn = () => {
   const email = useRef();
@@ -52,75 +52,56 @@ const SindIn = () => {
   };
 
   return (
-    <main className="flex w-full h-full items-center justify-between relative ">
-      <img
-        className="hidden md:block md:absolute md:top-0 md:left-0 h-screen w-[50%] object-container  "
-        src="/public/images/bomberoImg.jpg"
-        alt="signin"
-      />
-      <div className="flex flex-col md:absolute md:top-0 md:left-[50%] justify-center items-center h-screen w-full md:w-[50%] ">
-        <p className="font-semibold text-[30px] text-center mt-4">
-          Bomberos Buga
-        </p>
-        <div className="">
-          <p className="font-semibold text-[14px] text-center p-2">
-            Horario de Atencion
-          </p>
-          <p className="font-semibold text-[12px]  text-center p-2">
-            Lunes, Martes, Miercoles, Jueves y Viernes
-          </p>
-          <p className="font-semibold text-[12px] text-center p-2">
-            8:00 am -12:00pm / 2:00pm - 6:00pm
-          </p>
-          <p className="font-semibold text-[12px]  text-center p-2">Sabados</p>
-        </div>
-
-        <form className="flex flex-col my-[2px] relative">
-          <input
-            className="w-[260px] md:w-[300px] lg:w-[260px] xl:w-[440px] h-[45px] p-2 my-[12px] text-[12px] rounded-lg border-2 border-[#1F1F1F]"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            ref={email}
-          />
-          <input
-            className="w-[260px] md:w-[300px] lg:w-[360px] xl:w-[440px] h-[45px] p-2 my-[12px] text-[12px] rounded-lg border-2 border-[#1F1F1F]"
-            type={passwordVisible ? "text" : "password"}
-            name="password"
-            id="password"
-            placeholder="Contraseña"
-            ref={password}
-          />
-          <div
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
-            onClick={togglePasswordVisibility}
-          >
-            {passwordVisible ? <FaEye /> : <FaEyeSlash />}
+    <>
+      <div className="flex justify-center  shadow-2xl rounded-xl xl:mx-[20%] ">
+        <form className="flex max-w-md flex-col gap-4  relative  ">
+          <div>
+            <div className="  block mt-4 ">
+              <Typography variant="h6" className=" font-bold ">
+                Ingrese Email
+              </Typography>
+            </div>
+            <input
+              className="w-[260px] md:w-[300px] lg:w-[260px] xl:w-[440px] h-[45px] p-2 my-[12px] text-[12px] rounded-lg border-2 border-[#1F1F1F]"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              ref={email}
+            />
           </div>
-          <input
-            className="w-[260px] md:w-[300px] lg:w-[360px] xl:w-[440px] h-[45px] p-2 my-[12px] text-xl text-white rounded-lg bg-gradient-to-r from-[#ED3C3C] to-[#4338CA]"
-            type="button"
-            value="Ingresar"
-            onClick={singin}
-          />
+          <div>
+            <div className=" block ">
+              <Typography variant="h6" className=" font-bold ">
+                Ingrese Constrseña
+              </Typography>
+            </div>
+            <input
+              className="w-[260px] md:w-[300px] lg:w-[360px] xl:w-[440px]  h-[45px] p-2 my-[12px] text-[12px] rounded-lg border-2 border-[#1F1F1F]"
+              type={passwordVisible ? "text" : "password"}
+              name="password"
+              id="password"
+              placeholder="Contraseña"
+              ref={password}
+            />
+            <div
+              className="absolute xl:mt-[-7%] mt-[-13%]  right-4  transform -translate-y-1/2 cursor-pointer"
+              onClick={togglePasswordVisibility}
+            >
+              {passwordVisible ? <FaEye /> : <FaEyeSlash />}
+            </div>
+          </div>
+          <div className="flex items-center gap-2 justify-center">
+            <input
+              className="w-[260px] md:w-[300px] lg:w-[360px] xl:w-[200px] h-[45px] p-2 my-[12px]  text-xl text-white rounded-lg bg-gradient-to-r from-[#ED3C3C] to-[#4338CA]"
+              type="button"
+              value="Ingresar"
+              onClick={singin}
+            />
+          </div>
         </form>
-        <p className="font-semibold text-[12px] mt-[12px] text-center p-2">
-          No tienes una cuenta todavia?{" "}
-          <Anchor to="/register" className="text-[#ED3C3C]">
-            Registrarte
-          </Anchor>
-          !
-        </p>
-        <p className="font-semibold text-[12px] text-center p-2">
-          Regresar al{" "}
-          <Anchor to="/" className="text-[#ED3C3C] hover:text-black">
-            Inicio
-          </Anchor>
-          !
-        </p>
       </div>
-    </main>
+    </>
   );
 };
 
