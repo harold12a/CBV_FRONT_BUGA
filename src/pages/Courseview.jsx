@@ -79,7 +79,11 @@ export const Courseview = () => {
                   </div>
                 </div>
                 <div className="mt-10">
-                  <Button color="blue">Solicitar Informcion</Button>
+                  <Button color="blue">
+                    <a href="https://api.whatsapp.com/send?phone=3117435713&text=Hola,%20me%20gustaría%20obtener%20más%20información.">
+                      Solicitar Información
+                    </a>
+                  </Button>
                   <Button color="failure">Comprar</Button>
                 </div>
               </div>
