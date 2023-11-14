@@ -30,6 +30,7 @@ import { ViewCapacitacion } from "../components/Capacitaciones/ViewCapacitacion"
 import { ViewExtintores } from "../components/Extintores/ViewExtintores";
 import { ViewAmbulancia } from "../components/Ambulancia/ViewAmbulancia";
 import { ViewInspeccion } from "../components/Inspeccion.jsx/ViewInspeccion";
+import { Cart } from "./carrito/Cart";
 
 const router = createBrowserRouter([
   {
@@ -88,6 +89,7 @@ const router = createBrowserRouter([
       { path: "/post_editar", element: <CardPostEdit /> },
       { path: "/extintores_editar", element: <CardExtintoresEdit /> },
       { path: "/capacitaciones_editar", element: <CardCapacitacionEdit /> },
+      { path: "/cart", element: <Cart /> },
     ],
   },
 ]);
