@@ -27,10 +27,13 @@ export const CardCapacitacionEdit = () => {
   }, []);
   return (
     <>
-      <Typography variant="h5" className=" font-bold pl-2 mt-2 mb-4 ">
-        Capacitaciones
+      <Typography
+        variant="h4"
+        className=" font-bold pl-2 mt-4 text-center uppercase "
+      >
+        Panel para editar o eliminar una capacitacion
       </Typography>
-      <div className="border-t-2 border-gray-400 w-80 my-4"></div>
+      <div className="border-t-2 border-gray-400   my-4"></div>
       <Swiper
         direction={"vertical"}
         pagination={{

@@ -26,7 +26,10 @@ export const CardCourseEdit = () => {
   }, []);
   return (
     <>
-      <Typography variant="h4" className=" font-bold pl-2 mt-4 text-center ">
+      <Typography
+        variant="h4"
+        className=" font-bold pl-2 mt-4 text-center uppercase "
+      >
         Panel para editar o eliminar un curso
       </Typography>
       <div className="border-t-2 border-gray-400  my-4 "></div>
@@ -36,12 +39,12 @@ export const CardCourseEdit = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="h-[70vh]"
+        className="h-[70vh] xl:h-[90vh]"
       >
         {courses.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-white border-8 border-white drop-shadow-2xl rounded-2xl   "
+            className="rounded-2xl  mb-[2vh] xl:mx-[35%] xl:mt-4 "
           >
             <CardViewEdit
               _id={each._id.toString()}

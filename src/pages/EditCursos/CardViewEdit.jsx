@@ -62,50 +62,56 @@ export const CardViewEdit = ({
   };
   return (
     <>
-      <Card className="w-full max-w-[23.5rem] shadow-lg ">
-        <CardHeader floated={false} color="blue-gray">
-          <img src={image} />
-          <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-          <IconButton
-            size="sm"
-            color="red"
-            variant="text"
-            className="!absolute top-4 right-4 rounded-full"
-          ></IconButton>
-        </CardHeader>
-        <CardBody>
-          <div className="mb-3 flex items-center justify-between">
-            <Typography variant="h5" color="blue-gray" className="font-medium">
-              {title}
-            </Typography>
-          </div>
-          <Typography color="gray">Inicio de curso</Typography>
-          <Typography color="gray">{formattedDate}</Typography>
-        </CardBody>
-        <CardFooter className="pt-1">
-          <div className="flex justify-around mb-2">
-            {/* Modal */}
-            <ModalEditCourse
-              show={isModalOpen}
-              onClose={closeModal}
-              _id={_id}
-              title={title}
-              date={date}
-              image={image}
-              description={description}
-              timeofCurse={timeofCurse}
-            />
-            <Button color="failure" pill>
-              <ImCross onClick={() => btndelete(_id)} />
-            </Button>
-          </div>
-          <Anchor to={`/course_vista/${_id}`}>
-            <Button color="dark" className="mx-auto  text-center">
-              Mas Informacion
-            </Button>
-          </Anchor>
-        </CardFooter>
-      </Card>
+      <div className="md:ml-[30%] xl:ml-[3%]">
+        <Card className="w-full max-w-[23.5rem] shadow-lg ">
+          <CardHeader floated={false} color="blue-gray">
+            <img src={image} />
+            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+            <IconButton
+              size="sm"
+              color="red"
+              variant="text"
+              className="!absolute top-4 right-4 rounded-full"
+            ></IconButton>
+          </CardHeader>
+          <CardBody>
+            <div className="mb-3 flex items-center justify-between">
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="font-medium"
+              >
+                {title}
+              </Typography>
+            </div>
+            <Typography color="gray">Inicio de curso</Typography>
+            <Typography color="gray">{formattedDate}</Typography>
+          </CardBody>
+          <CardFooter className="pt-1">
+            <div className="flex justify-around mb-2">
+              {/* Modal */}
+              <ModalEditCourse
+                show={isModalOpen}
+                onClose={closeModal}
+                _id={_id}
+                title={title}
+                date={date}
+                image={image}
+                description={description}
+                timeofCurse={timeofCurse}
+              />
+              <Button color="failure" pill>
+                <ImCross onClick={() => btndelete(_id)} />
+              </Button>
+            </div>
+            <Anchor to={`/course_vista/${_id}`}>
+              <Button color="dark" className="mx-auto  text-center">
+                Mas Informacion
+              </Button>
+            </Anchor>
+          </CardFooter>
+        </Card>
+      </div>
     </>
   );
 };

@@ -47,7 +47,6 @@ export const Card = () => {
           <SwiperSlide
             key={each._id.toString()}
             className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl xl:h-[45vh] h-[45vh] md:h-[35vh] w-[60vw] mt-[14vh] mb-[50px] relative"
-            // className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl xl:h-[52vh] md:h-[30vh] h-[45vh] w-[60vw] xl:mt-[24vh] md:mt-[10vh] mt-[14vh] mb-[30px]  relative"
           >
             <CardViewEdit
               _id={each._id.toString()}
