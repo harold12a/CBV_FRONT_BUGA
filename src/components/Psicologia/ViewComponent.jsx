@@ -8,14 +8,17 @@ import { Card } from "flowbite-react";
 export const ViewComponent = () => {
   return (
     <>
-      <Typography
-        variant="h4"
-        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[40px] "
-      >
-        Psicologia
-      </Typography>
+      <div className="flex justify-center xl:justify-start ">
+        <Typography
+          variant="h4"
+          className=" font-bold pl-4 mt-4 md:pl-8 md:text-[40px] "
+        >
+          Psicologia
+        </Typography>
+      </div>
+
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <div className="flex xl:justify-around ">
+      <div className="flex xl:justify-around md:justify-center mt-4">
         <Card
           className="max-w-sm"
           imgSrc="/public/images/jessica.jpg"
@@ -38,7 +41,7 @@ export const ViewComponent = () => {
             </Button>
           </Anchor>
         </Card>
-        <div className="xl:block md:block hidden ">
+        <div className="xl:block  hidden  ">
           <Card href="#" className="max-w-sm">
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
               Noteworthy technology acquisitions 2021

@@ -5,20 +5,25 @@ import { Button } from "flowbite-react";
 export const ViewExtintores = () => {
   return (
     <>
-      <Typography variant="h5" className=" font-bold pl-2 mt-10 mb-4  ">
+      <Typography
+        variant="h5"
+        className=" font-bold pl-2 mt-10 mb-4 flex justify-center md:text-[30px]  "
+      >
         Extintores
       </Typography>
-      <Card
-        className="max-w-sm  "
-        imgAlt="Meaningful alt text for an image that is not purely decorative"
-        imgSrc="/public/images/extintores.webp"
-      >
-        <Anchor to={"/servicios_extintores"}>
-          <div className="flex justify-center">
-            <Button color="failure">Comprar</Button>
-          </div>
-        </Anchor>
-      </Card>
+      <div className="flex justify-center">
+        <Card
+          className="max-w-sm  "
+          imgAlt="Meaningful alt text for an image that is not purely decorative"
+          imgSrc="/public/images/extintores.webp"
+        >
+          <Anchor to={"/servicios_extintores"}>
+            <div className="flex justify-center">
+              <Button color="failure">Comprar</Button>
+            </div>
+          </Anchor>
+        </Card>
+      </div>
     </>
   );
 };

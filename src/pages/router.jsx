@@ -48,7 +48,14 @@ const router = createBrowserRouter([
       { path: "/extintores", element: <ViewExtintores /> },
       { path: "/ambulancia", element: <ViewAmbulancia /> },
       { path: "/inspeccion", element: <ViewInspeccion /> },
-
+      { path: "/noticias_vista/:_id", element: <NotiView /> },
+      { path: "/course_vista/:_id", element: <Courseview /> },
+      { path: "/post_view", element: <CardPost /> },
+      { path: "/servicios_extintores", element: <Extinguisher /> },
+      { path: "/servicios_ambulancia", element: <Ambulance /> },
+      { path: "/servicios_inspecciones", element: <Inspection /> },
+      { path: "/capacitaciones_vista", element: <Training /> },
+      { path: "/capacitaciones/:_id", element: <TrainingView /> },
       {
         path: "/schema",
         element: <Schema />,
@@ -73,22 +80,71 @@ const router = createBrowserRouter([
           return !user && redirect("/not-allowed");
         },
       },
-      { path: "/extintor", element: <Extintores /> },
-      { path: "/capacitacion", element: <Capacitaciones /> },
-      { path: "/psicologia_crud", element: <Psicologia /> },
-      { path: "/noticias_vista/:_id", element: <NotiView /> },
-      { path: "/course_vista/:_id", element: <Courseview /> },
-      { path: "/post_view", element: <CardPost /> },
-      { path: "/servicios_extintores", element: <Extinguisher /> },
-      { path: "/servicios_ambulancia", element: <Ambulance /> },
-      { path: "/servicios_inspecciones", element: <Inspection /> },
-      { path: "/capacitaciones_vista", element: <Training /> },
-      { path: "/capacitaciones/:_id", element: <TrainingView /> },
-      { path: "/noticias_editar", element: <Card /> },
-      { path: "/cursos_editar", element: <CardCourseEdit /> },
-      { path: "/post_editar", element: <CardPostEdit /> },
-      { path: "/extintores_editar", element: <CardExtintoresEdit /> },
-      { path: "/capacitaciones_editar", element: <CardCapacitacionEdit /> },
+      {
+        path: "/extintor",
+        element: <Extintores />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+      {
+        path: "/capacitacion",
+        element: <Capacitaciones />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+      {
+        path: "/psicologia_crud",
+        element: <Psicologia />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+
+      {
+        path: "/noticias_editar",
+        element: <Card />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+      {
+        path: "/cursos_editar",
+        element: <CardCourseEdit />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+      {
+        path: "/post_editar",
+        element: <CardPostEdit />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+      {
+        path: "/extintores_editar",
+        element: <CardExtintoresEdit />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
+      {
+        path: "/capacitaciones_editar",
+        element: <CardCapacitacionEdit />,
+        loader: () => {
+          let user = JSON.parse(localStorage.getItem("user"));
+          return !user && redirect("/not-allowed");
+        },
+      },
       { path: "/cart", element: <Cart /> },
     ],
   },
