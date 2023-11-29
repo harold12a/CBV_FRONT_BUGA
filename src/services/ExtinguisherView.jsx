@@ -1,6 +1,5 @@
 import { Link as Anchor } from "react-router-dom";
 import PropTypes from "prop-types";
-// import { Button } from "@material-tailwind/react";
 import { Button } from "flowbite-react";
 import { Typography } from "@material-tailwind/react";
 
@@ -32,7 +31,9 @@ export const ExtinguisherView = ({ extinguisher, price, image }) => {
         </Typography>
         <Anchor>
           <div className="flex justify-center xl:mt-[-5%] ">
-            <Button color="failure">Comprar</Button>
+            <Anchor to={"/cart"}>
+              <Button color="failure">Comprar</Button>
+            </Anchor>
           </div>
         </Anchor>
       </div>
@@ -41,7 +42,6 @@ export const ExtinguisherView = ({ extinguisher, price, image }) => {
 };
 
 ExtinguisherView.propTypes = {
-  // _id: PropTypes.string.isRequired,
   extinguisher: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,

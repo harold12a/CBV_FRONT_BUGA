@@ -28,7 +28,25 @@ export const Training = () => {
   }, []);
   return (
     <>
-      <div className="flex xl:justify-between mt-2">
+      <div className="xl:flex xl:justify-around hidden ">
+        <iframe
+          className=" w-[600px] h-96 ml-4 rounded-lg  shadow-xl"
+          src="https://www.youtube.com/embed/R-TNTVHvM3c"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>{" "}
+        <iframe
+          className=" w-[600px] h-96 ml-4 rounded-lg  shadow-xl"
+          src="https://www.youtube.com/embed/R-TNTVHvM3c"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <div className="flex xl:justify-between mt-10">
         <div className="xl:block md:block hidden mt-36 ml-10 ">
           <Card href="#" className="max-w-sm">
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">

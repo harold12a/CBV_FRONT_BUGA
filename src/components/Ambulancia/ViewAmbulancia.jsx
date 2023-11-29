@@ -7,7 +7,7 @@ export const ViewAmbulancia = () => {
     <>
       <Typography
         variant="h5"
-        className=" font-bold pl-2 mt-10 mb-4 flex justify-center md:text-[30px] "
+        className=" font-bold pl-2 mt-10 mb-4 flex justify-center md:text-[20px] "
       >
         Ambulancia
       </Typography>
@@ -19,7 +19,7 @@ export const ViewAmbulancia = () => {
         >
           <Anchor to={"/servicios_ambulancia"}>
             <div className="flex justify-center">
-              <Button color="failure">Solicitar</Button>
+              <Button color="failure">Solicitar Servicio</Button>
             </div>
           </Anchor>
         </Card>

@@ -29,7 +29,7 @@ export const ViewNoticia = () => {
     <>
       <Typography
         variant="h4"
-        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[40px] "
+        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[30px] "
       >
         Noticias
       </Typography>

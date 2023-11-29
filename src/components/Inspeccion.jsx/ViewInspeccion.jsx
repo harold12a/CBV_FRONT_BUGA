@@ -7,7 +7,7 @@ export const ViewInspeccion = () => {
     <>
       <Typography
         variant="h5"
-        className=" font-bold pl-2 mt-10 mb-4 flex justify-center md:text-[30px] "
+        className=" font-bold pl-2 mt-10 mb-4 flex justify-center md:text-[20px] "
       >
         Inspecciones
       </Typography>
@@ -19,7 +19,7 @@ export const ViewInspeccion = () => {
         >
           <Anchor to={"/servicios_inspecciones"}>
             <div className="flex justify-center">
-              <Button color="failure">Solicitar</Button>
+              <Button color="failure">Solicitar Visita</Button>
             </div>
           </Anchor>
         </Card>

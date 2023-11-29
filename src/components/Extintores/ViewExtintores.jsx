@@ -7,7 +7,7 @@ export const ViewExtintores = () => {
     <>
       <Typography
         variant="h5"
-        className=" font-bold pl-2 mt-10 mb-4 flex justify-center md:text-[30px]  "
+        className=" font-bold pl-2 mt-10 mb-4 flex justify-center md:text-[20px]  "
       >
         Extintores
       </Typography>

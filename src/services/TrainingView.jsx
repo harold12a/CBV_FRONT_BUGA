@@ -10,6 +10,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions } from "@mui/material";
 import { Button } from "flowbite-react";
+import { Link as Anchor } from "react-router-dom";
 export const TrainingView = () => {
   let { _id } = useParams();
   // console.log("id: " + _id);
@@ -83,7 +84,9 @@ export const TrainingView = () => {
                       Solicitar Información
                     </a>
                   </Button>
-                  <Button color="failure">Comprar</Button>
+                  <Anchor to={"/cart"}>
+                    <Button color="failure">Comprar</Button>
+                  </Anchor>
                 </div>
               </div>
               <Paper elevation={3} className="mx-8">
