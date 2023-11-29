@@ -13,8 +13,13 @@ import { Carousel } from "flowbite-react";
 import Container from "@mui/material/Container";
 import { useState, useEffect } from "react";
 import { RiWhatsappLine } from "react-icons/ri";
+//Modal
+import { Button, Modal } from "flowbite-react";
+import { Avatar } from "flowbite-react";
 const Principal = () => {
   const [showButton, setShowButton] = useState(false);
+  // Modal
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     // Agrega un evento de desplazamiento para controlar la visibilidad del botón
@@ -81,6 +86,29 @@ const Principal = () => {
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
                 Sabe usted cuanto vale equipar a una unidad bomberil ?
               </h5>
+              <Button onClick={() => setOpenModal(true)}>Ver</Button>
+              <Modal show={openModal} onClose={() => setOpenModal(false)}>
+                <Modal.Header>Equipo de Bombero</Modal.Header>
+                <Modal.Body>
+                  <div className="space-y-6">
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                      With less than a month to go before the European Union
+                      enacts new consumer privacy laws for its citizens,
+                      companies around the world are updating their terms of
+                      service agreements to comply.
+                    </p>
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                      The European Union’s General Data Protection Regulation
+                      (G.D.P.R.) goes into effect on May 25 and is meant to
+                      ensure a common set of data rights in the European Union.
+                      It requires organizations to notify users as soon as
+                      possible of high-risk data breaches that could personally
+                      affect them.
+                    </p>
+                  </div>
+                </Modal.Body>
+                <Modal.Body></Modal.Body>
+              </Modal>
             </Card>
           </div>
         </div>
@@ -154,6 +182,86 @@ const Principal = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+      </div>
+      {/* unidades */}
+      <div className="bg-gray-200 pb-8 mx-4 ">
+        <Typography
+          variant="h4"
+          className="font-bold pl-4 mt-[85px] md:pl-8 md:text-[30px] flex justify-center uppercase "
+        >
+          texto
+        </Typography>
+        <div className="flex flex-wrap items-center gap-4 mt-4 justify-center  ">
+          <Avatar img="/public/images/haroldAlzate.jpg" size="xl" rounded>
+            <div className="space-y-1 font-medium dark:text-white ">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+          <Avatar img="/public/images/andresAlzate.jpg" size="xl" rounded>
+            <div className="space-y-1 font-medium dark:text-white">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+          <Avatar
+            className="object-scale-down "
+            img="/public/images/andresAlzate.jpg"
+            size="xl"
+            rounded
+          >
+            <div className="space-y-1 font-medium dark:text-white">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+          <Avatar img="/public/images/andresAlzate.jpg" size="xl" rounded>
+            <div className="space-y-1 font-medium dark:text-white">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+          <Avatar img="/public/images/andresAlzate.jpg" size="xl" rounded>
+            <div className="space-y-1 font-medium dark:text-white">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+          <Avatar img="/public/images/andresAlzate.jpg" size="xl" rounded>
+            <div className="space-y-1 font-medium dark:text-white">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+          <Avatar img="/public/images/andresAlzate.jpg" size="xl" rounded>
+            <div className="space-y-1 font-medium dark:text-white">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+          <Avatar img="/public/images/andresAlzate.jpg" size="xl" rounded>
+            <div className="space-y-1 font-medium dark:text-white">
+              <div>Jese Leos</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Joined in August 2014
+              </div>
+            </div>
+          </Avatar>
+        </div>
       </div>
     </>
   );
