@@ -1,4 +1,4 @@
-import { MdOutlinePhoneIphone } from "react-icons/md";
+// import { MdOutlinePhoneIphone } from "react-icons/md";s
 // import required modules
 import { Typography } from "@material-tailwind/react";
 import { ViewNoticia } from "./Noticias/ViewNoticia";
@@ -16,6 +16,9 @@ import { RiWhatsappLine } from "react-icons/ri";
 //Modal
 import { Button, Modal } from "flowbite-react";
 import { Avatar } from "flowbite-react";
+// Bootstrap
+import Image from "react-bootstrap/Image";
+
 const Principal = () => {
   const [showButton, setShowButton] = useState(false);
   // Modal
@@ -42,7 +45,7 @@ const Principal = () => {
       <div className="relative">
         {/* Botón de WhatsApp flotante */}
         {showButton && (
-          <div className="fixed bottom-8 right-8 bg-green-500 rounded-full p-4 shadow-md z-10 mb-[40px]">
+          <div className="fixed bottom-8 right-8 bg-green-500 rounded-full p-4 shadow-md z-10 mb-[40px] animate-ping animate-thrice">
             <a
               href="https://api.whatsapp.com/send?phone=3117435713&text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20 información de%20.%20%F0%9F%98%8A"
               target="_blank"
@@ -71,7 +74,7 @@ const Principal = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <div className="flex justify-center mt-[25%] drop-shadow-2xl">
+          <div className="flex justify-center mt-[20%] drop-shadow-2xl animate-pulse animate-infinite">
             <Card
               className="max-w-sm"
               renderImage={() => (
@@ -112,24 +115,32 @@ const Principal = () => {
             </Card>
           </div>
         </div>
-        <img
-          className="xl:object-none xl:object-right-top xl:h-[1096px] xl:w-full xl:mr-4  h-96 w-full  object-cover object-center md:object-cover md:h-auto md:w-full"
-          src="/public/images/flame1.jpg"
-          alt="nature image"
-        />
+        <div className=" xl:w-[40%] xl:mr-[5%] flex justify-">
+          <Image src="/public/images/flame1.jpg" fluid />
+        </div>
       </div>
 
-      <div className=" bg-white border-4 border-white drop-shadow-xl text-center text-m underline h-[6vh] mx-auto mt-[5vh] mb-3 flex  justify-center ">
-        <MdOutlinePhoneIphone className="text-3xl  " />
-        <h1 className="mt-1 font-mono  font-semibold text-xl">
-          linea de emergencia 119
-        </h1>
+      <div className=" bg-white border-4 border-white drop-shadow-xl text-center text-m  h-[6vh] mx-auto mt-[5vh] mb-3 flex  justify-center ">
+        {/* <MdOutlinePhoneIphone className="text-3xl  animate-ping animate-infinite " /> */}
+        {/* <h1 className="mt-1 font-semibold text-xl ">Emergencia 119</h1> */}
       </div>
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-[600px] md:h-[500px]">
+      <div className=" object-container h-56 sm:h-64 xl:h-80 2xl:h-[600px] md:h-[500px] bg-black">
         <Carousel>
-          <img src="/public/images/carousel1.jpg" alt="..." />
-          <img src="/public/images/carouse2.jpg" alt="..." />
-          <img src="/public/images/carouse3.jpg" alt="..." />
+          <img
+            className="object-container w-[90%] h-[96%] "
+            src="/public/images/carousel1.jpg"
+            alt="..."
+          />
+          <img
+            className="object-container w-[90%] h-[96%] "
+            src="/public/images/carouse2.jpg"
+            alt="..."
+          />
+          <img
+            className="object-container w-[90%] h-[96%] "
+            src="/public/images/carouse3.jpg"
+            alt="..."
+          />
         </Carousel>
       </div>
 
@@ -145,12 +156,12 @@ const Principal = () => {
 
       <Typography
         variant="h4"
-        className="font-bold pl-4 mt-[85px] md:pl-8 md:text-[30px] "
+        className="font-bold pl-4 mt-[85px] md:pl-8 md:text-[20px] "
       >
         Servicios
       </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
-      <div className=" xl:flex xl:justify-around md:grid md:grid-cols-2 md:gap-2 ">
+      <div className=" xl:flex xl:justify-around md:grid md:grid-cols-2 md:gap-2  ">
         {/* Extintores */}
         <Container maxWidth="sm">
           <ViewExtintores />

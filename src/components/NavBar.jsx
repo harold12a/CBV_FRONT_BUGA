@@ -102,7 +102,7 @@ const NavBar = () => {
         />
       </div>
       <div className="border border-black   my-4 mr-[12.5%]  ml-[12.5%]"></div>
-      <Navbar fluid rounded>
+      <Navbar fluid rounded className=" md:flex md:justify-center">
         <Navbar.Brand>
           <Anchor to="/" className="flex items-center ">
             {/* <HiHome className="text-4xl mr-4  md:hidden xl:block" /> */}

@@ -29,7 +29,7 @@ export const ViewNoticia = () => {
     <>
       <Typography
         variant="h4"
-        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[30px] "
+        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[20px] "
       >
         Noticias
       </Typography>
@@ -43,12 +43,12 @@ export const ViewNoticia = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="pr-[60%]"
       >
         {noticias.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl xl:h-[52vh] md:h-[30vh] h-[45vh] w-[60vw] xl:mt-[24vh] md:mt-[10vh] mt-[14vh] mb-[30px]  relative"
+            className="bg-white border-4 border-white drop-shadow-2xl rounded-2xl xl:h-[40vh] md:h-[30vh] h-[42vh] xl:w-[17vw] w-[60vw] xl:mt-[11vh] md:mt-[10vh] mt-[14vh] mb-[30px]  relative"
           >
             <CardNoticias
               _id={each._id.toString()}

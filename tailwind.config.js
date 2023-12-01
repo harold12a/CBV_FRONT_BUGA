@@ -14,7 +14,10 @@ module.exports = withMT(
       extend: {}
     },
     variants: {},
-    plugins: [require('flowbite/plugin')],
+    plugins: [require('flowbite/plugin'),
+    require('tailwindcss-animated')
+    ],
+
   }
 )
 // /** @type {import('tailwindcss').Config} */
