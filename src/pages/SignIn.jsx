@@ -53,7 +53,7 @@ const SindIn = () => {
 
   return (
     <>
-      <div className="flex justify-center  shadow-2xl rounded-xl xl:mx-[20%] ">
+      <div className="flex justify-center  shadow-2xl rounded-xl xl:mx-[30%] ">
         <form className="flex max-w-md flex-col gap-4  relative  ">
           <div>
             <div className="  block mt-4 ">

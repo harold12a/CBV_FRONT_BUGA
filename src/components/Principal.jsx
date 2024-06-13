@@ -200,7 +200,7 @@ const Principal = () => {
           variant="h4"
           className="font-bold pl-4 mt-[85px] md:pl-8 md:text-[30px] flex justify-center uppercase "
         >
-          texto
+          texto rangos en bomberos
         </Typography>
         <div className="flex flex-wrap items-center gap-4 mt-4 justify-center  ">
           <Avatar img="/public/images/haroldAlzate.jpg" size="xl" rounded>
@@ -274,6 +274,9 @@ const Principal = () => {
           </Avatar>
         </div>
       </div>
+      <h1 className="text-center text-lg mt-4 uppercase font-bold">
+        pendiente incorporar lo de ley documentacion consultar{" "}
+      </h1>
     </>
   );
 };

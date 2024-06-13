@@ -44,7 +44,7 @@ export const CardCourseEdit = () => {
         {courses.map((each) => (
           <SwiperSlide
             key={each._id.toString()}
-            className="rounded-2xl  mb-[2vh] xl:mx-[35%] xl:mt-4 "
+            className="rounded-2xl  mb-[-2.2vh] xl:mx-[35%] xl:mt-4 "
           >
             <CardViewEdit
               _id={each._id.toString()}

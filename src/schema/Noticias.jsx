@@ -1,5 +1,5 @@
 import { Input } from "@material-tailwind/react";
-import { Select, Option } from "@material-tailwind/react";
+// import { Select, Option } from "@material-tailwind/react";
 import axios from "axios";
 import apiUrl from "../api/apiUrl";
 import headers from "../api/headers";
@@ -87,7 +87,7 @@ const Noticias = () => {
           value={descriptionValue}
           onChange={(e) => setDescriptionValue(e.target.value)}
         />
-        <div className="flex w-72 flex-col gap-6">
+        {/* <div className="flex w-72 flex-col gap-6">
           <Select size="md" label="unidad">
             <Option>Capitan</Option>
             <Option>Teniente</Option>
@@ -96,8 +96,8 @@ const Noticias = () => {
             <Option>Cabo</Option>
             <Option>Bombero</Option>
           </Select>
-        </div>
-        <Input color="teal" label="Nombre de la unidad" />
+        </div> */}
+        {/* <Input color="teal" label="Nombre de la unidad" /> */}
       </div>
 
       <div className="flex flex-col w-72 mx-auto justify-center mt-5">

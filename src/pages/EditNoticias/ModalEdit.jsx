@@ -121,7 +121,7 @@ export const ModalEdit = ({ _id, title, date, image, description }) => {
                   onChange={(e) => setDescriptionValue(e.target.value)}
                 />
 
-                <Input color="teal" label="Nombre de la unidad" />
+                {/* <Input color="teal" label="Nombre de la unidad" /> */}
               </div>
             </div>
 

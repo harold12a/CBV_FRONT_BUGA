@@ -84,15 +84,21 @@ const NavBar = () => {
   let user_id = user?._id;
   return (
     <>
-      <Blockquote className="bg-black text-white xl:block hidden ">
-        <div className="mx-8">
-          Flowbite is just awesome. It contains tons of predesigned components
-          and pages starting from login screen to complex dashboard. Perfect
-          choice for your.
+      <Blockquote className="bg-cyan-500 text-white xl:block hidden  ">
+        
+        <div className="flex items-center  mx-2  pb-2 pt-2 ">
+          <img src="/public/images/bvg.jpeg" alt="img-logo-bomberos" className="w-10 "  />
+     <span className="flex-grow text-center text-base">
+     Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2368888 - 3117435713 - haroldalzate@gmail.com
+     </span>
+    
+    
+       
+       
         </div>
       </Blockquote>
-      <Blockquote className="bg-black text-white xl:hidden block ">
-        <div className="text-center">Flowbite is just awesome</div>
+      <Blockquote className="bg-cyan-500 text-white xl:hidden block ">
+        <div className="text-center text-base">Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2368888 - 3117435713 - haroldalzate@gmail.com</div>
       </Blockquote>
       <div className="flex justify-center mt-2 ">
         <img
@@ -101,20 +107,27 @@ const NavBar = () => {
           className="w-9/12 "
         />
       </div>
+      <h1> consultar banner institucional</h1>
       <div className="border border-black   my-4 mr-[12.5%]  ml-[12.5%]"></div>
       <Navbar fluid rounded className=" md:flex md:justify-center">
         <Navbar.Brand>
           <Anchor to="/" className="flex items-center ">
-            {/* <HiHome className="text-4xl mr-4  md:hidden xl:block" /> */}
           </Anchor>
         </Navbar.Brand>
         {user_id ? (
           <>
-            <div className="flex md:order-2 ml-[45%]">
+            <div className="flex md:order-2 mr-[75%] xl:mr-0">
               <Dropdown
                 arrowIcon={false}
                 inline
-                label={<Avatar alt="User settings" img={photo} rounded />}
+                label={
+                  <Avatar
+                    alt="User settings"
+                    img={photo}
+                    rounded
+                    className="xl:ml-96"
+                  />
+                }
               >
                 <Dropdown.Header>
                   <span className="block text-sm">Usuario</span>
@@ -139,16 +152,15 @@ const NavBar = () => {
         <div className="flex md:order-2">
           <Navbar.Toggle />
         </div>
-        <Navbar.Collapse>
-          {/* <Navbar.Link href="#" active>
-            Home
-          </Navbar.Link> */}
+   
+
+        <Navbar.Collapse >
           {options?.map((option, index) => (
             <Anchor
               onClick={option?.onClick}
               key={index}
               to={option?.to}
-              className="block mb-3  md:mr-[-15px] "
+              className="block mb-3 text-[18px] md:mr-[-15px] hover:text-cyan-500   "
             >
               {option?.title}
             </Anchor>
