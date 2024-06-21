@@ -85,15 +85,14 @@ export const Courseview = () => {
                       Solicitar Información
                     </a>
                   </Button>
-                  <Anchor to={"/cart"}>
-                    <Button color="failure">Comprar</Button>
-                  </Anchor>
+                  
+                    <Button color="failure">
+                      Comprar</Button>          
                 </div>
               </div>
               <Paper elevation={3} className="mx-8">
                 <p className="text-center font-bold text-xl mt-3 mb-4   bg-gray-300">
-                  La Federacion del Bomberos del Valle del Cauca y sus Regiones
-                  tiene un descuento del 50%
+                  La Federacion del Bomberos del Valle del Cauca y sus Regiones consultar por el descuento 
                 </p>
               </Paper>
             </CardContent>

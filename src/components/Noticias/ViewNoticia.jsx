@@ -29,12 +29,20 @@ export const ViewNoticia = () => {
     <>
       <Typography
         variant="h4"
-        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[20px] "
+        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[20px]   "
       >
-        Noticias
+        Histórico de Noticias
       </Typography>
       <div className="border-t-2 border-gray-400 xl:w-96 w-80 my-4"></div>
-
+      <Typography
+        variant="h6"
+        className="  md:pl-8 xl:block hidden   "
+      >
+       Bienvenido al histórico de noticias de emergencias de Bomberos Buga. 
+       En esta sección encontrarás todas las actualizaciones sobre incidentes, operativos de rescate, capacitaciones y eventos relacionados
+        con la gestión de emergencias. Mantente informado sobre cómo respondemos
+         y actuamos ante situaciones críticas para garantizar la seguridad y el bienestar de nuestra comunidad.
+      </Typography>
       <Swiper
         slidesPerView={"auto"}
         centeredSlides={true}

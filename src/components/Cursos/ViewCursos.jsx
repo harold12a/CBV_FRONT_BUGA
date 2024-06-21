@@ -33,7 +33,16 @@ export const ViewCursos = () => {
         variant="h4"
         className=" font-bold pl-4 mt-4 md:pl-8 md:text-[20px] "
       >
-        Cursos
+       Cursos y Capacitaciones
+      </Typography>
+      <Typography
+        variant="h6"
+        className="  md:pl-8 xl:block hidden   "
+      >
+      Mantente atento a nuestros cursos y capacitaciones. Ofrecemos una variedad de programas diseñados para mejorar
+       tus habilidades y conocimientos en gestión de emergencias, primeros auxilios, y prevención de desastres. 
+       No te pierdas las oportunidades de aprendizaje que ofrecemos regularmente. 
+       ¡Inscríbete y prepárate para estar listo ante cualquier situación!
       </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       {/* pendiente este div para acomodar */}
@@ -43,89 +52,41 @@ export const ViewCursos = () => {
             <Accordion collapseAll>
               <Accordion.Panel>
                 <Accordion.Title>
-                  Sabe usted la importancia de capacitarse?
+                ¿Sabe usted la importancia de capacitarse en primeros auxilios?
                 </Accordion.Title>
                 <Accordion.Content>
                   <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    Flowbite is an open-source library of interactive components
-                    built on top of Tailwind CSS including buttons, dropdowns,
-                    modals, navbars, and more.
+                  En situaciones de emergencia, los primeros minutos son cruciales.
+                   La capacitación en primeros auxilios permite a las personas actuar de manera 
+                   rápida y efectiva para salvar vidas y reducir la gravedad de
+                    las lesiones antes de que lleguen los servicios de emergencia.
                   </p>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Check out this guide to learn how to&nbsp;
-                    <a
-                      href="https://flowbite.com/docs/getting-started/introduction/"
-                      className="text-cyan-600 hover:underline dark:text-cyan-500"
-                    >
-                      get started&nbsp;
-                    </a>
-                    and start developing websites even faster with components on
-                    top of Tailwind CSS.
+               
+                </Accordion.Content>
+              </Accordion.Panel>
+              <Accordion.Panel>
+                <Accordion.Title>
+                ¿Conoce los beneficios de estar preparado para desastres naturales?
+                </Accordion.Title>
+                <Accordion.Content>
+                  <p className="mb-2 text-gray-500 dark:text-gray-400">
+                  La formación en gestión de desastres naturales no solo protege a su familia 
+                  y a usted mismo, sino que también fortalece la resiliencia de su comunidad. 
+                  Estar preparado reduce el pánico y mejora la respuesta organizada ante eventos como terremotos, inundaciones y huracanes.
                   </p>
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
                 <Accordion.Title>
-                  Is there a Figma file available?
+                ¿Entiende la relevancia de la capacitación en prevención de incendios?
                 </Accordion.Title>
                 <Accordion.Content>
                   <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    Flowbite is first conceptualized and designed using the
-                    Figma software so everything you see in the library has a
-                    design equivalent in our Figma file.
+                  Aprender sobre la prevención y manejo de incendios puede significar
+                   la diferencia entre la vida y la muerte. La capacitación adecuada enseña a identificar 
+                   riesgos potenciales, utilizar extintores y evacuar edificios de manera segura, minimizando el daño a personas y propiedades.
                   </p>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Check out the
-                    <a
-                      href="https://flowbite.com/figma/"
-                      className="text-cyan-600 hover:underline dark:text-cyan-500"
-                    >
-                      Figma design system
-                    </a>
-                    based on the utility classes from Tailwind CSS and
-                    components from Flowbite.
-                  </p>
-                </Accordion.Content>
-              </Accordion.Panel>
-              <Accordion.Panel>
-                <Accordion.Title>
-                  What are the differences between Flowbite and Tailwind UI?
-                </Accordion.Title>
-                <Accordion.Content>
-                  <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    The main difference is that the core components from
-                    Flowbite are open source under the MIT license, whereas
-                    Tailwind UI is a paid product. Another difference is that
-                    Flowbite relies on smaller and standalone components,
-                    whereas Tailwind UI offers sections of pages.
-                  </p>
-                  <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    However, we actually recommend using both Flowbite, Flowbite
-                    Pro, and even Tailwind UI as there is no technical reason
-                    stopping you from using the best of two worlds.
-                  </p>
-                  <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    Learn more about these technologies:
-                  </p>
-                  <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                    <li>
-                      <a
-                        href="https://flowbite.com/pro/"
-                        className="text-cyan-600 hover:underline dark:text-cyan-500"
-                      >
-                        Flowbite Pro
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://tailwindui.com/"
-                        rel="nofollow"
-                        className="text-cyan-600 hover:underline dark:text-cyan-500"
-                      >
-                        Tailwind UI
-                      </a>
-                    </li>
-                  </ul>
+                
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>

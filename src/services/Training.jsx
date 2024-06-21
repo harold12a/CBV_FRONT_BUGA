@@ -31,7 +31,7 @@ export const Training = () => {
       <div className="xl:flex xl:justify-around hidden ">
         <iframe
           className=" w-[600px] h-96 ml-4 rounded-lg  shadow-xl"
-          src="https://www.youtube.com/embed/R-TNTVHvM3c"
+          src="https://www.youtube.com/embed/dtjugqYZjfQ?si=xu5LI3dtu3DFJFIc"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -39,7 +39,7 @@ export const Training = () => {
         ></iframe>{" "}
         <iframe
           className=" w-[600px] h-96 ml-4 rounded-lg  shadow-xl"
-          src="https://www.youtube.com/embed/R-TNTVHvM3c"
+          src="https://www.youtube.com/embed/4nxdEYI7gIo?si=OY33vT46KAMieR9k"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -12,8 +12,8 @@ export const Ambulance = () => {
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <div className="mx-auto max-w-screen-xl px-4">
         <img
-          className="h-96 w-full rounded-lg object-cover  object-center shadow-xl shadow-blue-gray-900/50"
-          src="/public/images/ambulancia.jpeg"
+          className=" w-11/12 rounded-lg object-cover  object-center shadow-xl shadow-blue-gray-900/50"
+          src="/public/images/img8.JPG"
           alt="nature image"
         />
       </div>

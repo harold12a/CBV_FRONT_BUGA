@@ -15,7 +15,7 @@ export const ViewAmbulancia = () => {
         <Card
           className="max-w-sm "
           imgAlt="Meaningful alt text for an image that is not purely decorative"
-          imgSrc="/public/images/ambulancia.jpeg"
+          imgSrc="/public/images/img4.jpeg"
         >
           <Anchor to={"/servicios_ambulancia"}>
             <div className="flex justify-center">

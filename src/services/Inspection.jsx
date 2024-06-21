@@ -16,8 +16,8 @@ export const Inspection = () => {
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <div className="mx-auto max-w-screen-xl px-4">
         <img
-          className="h-96 w-full rounded-lg object-cover  object-center shadow-xl shadow-blue-gray-900/50"
-          src="/public/images/inspeccion.jpg"
+          className="h-1/6 w-full rounded-lg object-cover  object-center shadow-xl shadow-blue-gray-900/50"
+          src="/public/images/img9.jpg"
           alt="nature image"
         />
       </div>

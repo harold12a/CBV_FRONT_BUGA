@@ -31,9 +31,14 @@ export const ExtinguisherView = ({ extinguisher, price, image }) => {
         </Typography>
         <Anchor>
           <div className="flex justify-center xl:mt-[-5%] ">
-            <Anchor to={"/cart"}>
-              <Button color="failure">Comprar</Button>
-            </Anchor>
+      
+              <Button color="failure">
+              <a href="https://api.whatsapp.com/send?phone=3117435713&text=Hola,%20me%20gustaría%20obtener%20más%20información.">
+              Comprar
+                    </a>
+             </Button>
+         
+            
           </div>
         </Anchor>
       </div>

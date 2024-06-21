@@ -19,7 +19,9 @@ export const ViewExtintores = () => {
         >
           <Anchor to={"/servicios_extintores"}>
             <div className="flex justify-center">
-              <Button color="failure">Comprar</Button>
+              <Button color="failure">
+              
+                Comprar</Button>
             </div>
           </Anchor>
         </Card>

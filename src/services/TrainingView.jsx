@@ -84,14 +84,14 @@ export const TrainingView = () => {
                       Solicitar Información
                     </a>
                   </Button>
-                  <Anchor to={"/cart"}>
+                  <Anchor to={""}>
                     <Button color="failure">Comprar</Button>
                   </Anchor>
                 </div>
               </div>
               <Paper elevation={3} className="mx-8">
                 <p className="text-center font-bold text-xl mt-3 mb-4   bg-gray-300">
-                  Empresas del valle del cauca tiene un descuento del 20%
+                  Empresas del valle del cauca tiene un descuento del 15%
                 </p>
               </Paper>
             </CardContent>

@@ -65,10 +65,16 @@ const Principal = () => {
       </div>
       {/* Video */}
       <div className="flex justify-between">
+
         <div className="xl:block hidden">
+          <div className="text-center text-2xl font-bold mb-4">
+            <span >
+              Cuerpo de Bomberos Voluntarios de Buga
+            </span>
+          </div>
           <iframe
             className=" w-[600px] h-96 ml-4 rounded-lg  shadow-xl"
-            src="https://www.youtube.com/embed/5bUH7luoUx0?si=3omgPB7ObpfkfLrw"
+            src="https://www.youtube.com/embed/O7EDWLGjMpc?si=xhYwhTkxLOUuQcyG"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -91,22 +97,22 @@ const Principal = () => {
               </h5>
               <Button onClick={() => setOpenModal(true)}>Ver</Button>
               <Modal show={openModal} onClose={() => setOpenModal(false)}>
-                <Modal.Header>Equipo de Bombero</Modal.Header>
+                <Modal.Header> Equipos de Protección Personal (EPP)</Modal.Header>
                 <Modal.Body>
                   <div className="space-y-6">
                     <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                      With less than a month to go before the European Union
-                      enacts new consumer privacy laws for its citizens,
-                      companies around the world are updating their terms of
-                      service agreements to comply.
+                      1- Traje de Bombero (Chaqueta y Pantalón): Aproximadamente 1,500 USD por bombero. <br />
+                      2- Casco: Alrededor de 300 USD por bombero. <br />
+                      3- Botas: Cerca de 200 USD por bombero. <br />
+                      4- Guantes: Aproximadamente 100 USD por bombero. <br />
+                      5- Equipo de Respiración Autónoma (ERA): Entre 3,000 y 5,000 USD por unidad.
+
                     </p>
-                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                      The European Union’s General Data Protection Regulation
-                      (G.D.P.R.) goes into effect on May 25 and is meant to
-                      ensure a common set of data rights in the European Union.
-                      It requires organizations to notify users as soon as
-                      possible of high-risk data breaches that could personally
-                      affect them.
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400 font-bold">
+                      Es importante tener en cuenta que estos costos son estimaciones generales
+                       y pueden variar según las especificaciones exactas y las necesidades de la unidad bomberil específica.
+                        Además, se pueden considerar costos adicionales como el mantenimiento del equipo,
+                         renovación de licencias y certificaciones, y otros gastos operativos.
                     </p>
                   </div>
                 </Modal.Body>
@@ -116,7 +122,7 @@ const Principal = () => {
           </div>
         </div>
         <div className=" xl:w-[40%] xl:mr-[5%] flex justify-">
-          <Image src="/public/images/flame1.jpg" fluid />
+          <Image src="/public/images/img.JPG" fluid />
         </div>
       </div>
 
@@ -128,12 +134,12 @@ const Principal = () => {
         <Carousel>
           <img
             className="object-container w-[90%] h-[96%] "
-            src="/public/images/carousel1.jpg"
+            src="/public/images/img1.JPG"
             alt="..."
           />
           <img
             className="object-container w-[90%] h-[96%] "
-            src="/public/images/carouse2.jpg"
+            src="/public/images/img2.jpeg"
             alt="..."
           />
           <img
@@ -158,7 +164,17 @@ const Principal = () => {
         variant="h4"
         className="font-bold pl-4 mt-[85px] md:pl-8 md:text-[20px] "
       >
-        Servicios
+      Explora Nuestros Servicios y Productos
+      </Typography>
+      <Typography
+        variant="h6"
+        className="  md:pl-8 xl:block hidden   "
+      >
+      Nos especializamos en proporcionar equipos como extintores de alta calidad y 
+      también ofrecemos servicios de ambulancia para responder rápidamente a emergencias médicas.
+       Además, ofrecemos capacitaciones avanzadas en gestión de emergencias y técnicas de rescate,
+        diseñadas para fortalecer las habilidades de tu equipo y mejorar la seguridad en operaciones críticas.
+         Explora nuestras soluciones y asegura que tu equipo esté preparado para cualquier desafío.
       </Typography>
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <div className=" xl:flex xl:justify-around md:grid md:grid-cols-2 md:gap-2  ">

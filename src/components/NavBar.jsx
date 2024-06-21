@@ -87,9 +87,9 @@ const NavBar = () => {
       <Blockquote className="bg-cyan-500 text-white xl:block hidden  ">
         
         <div className="flex items-center  mx-2  pb-2 pt-2 ">
-          <img src="/public/images/bvg.jpeg" alt="img-logo-bomberos" className="w-10 "  />
+          <img src="/public/images/LOGO.png" alt="img-logo-bomberos" className="w-10 "  />
      <span className="flex-grow text-center text-base">
-     Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2368888 - 3117435713 - haroldalzate@gmail.com
+     Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2366891 - 2366892 - 2366893 / calle 2 sur Nº 10-72 
      </span>
     
     
@@ -98,17 +98,17 @@ const NavBar = () => {
         </div>
       </Blockquote>
       <Blockquote className="bg-cyan-500 text-white xl:hidden block ">
-        <div className="text-center text-base">Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2368888 - 3117435713 - haroldalzate@gmail.com</div>
+        <div className="text-center text-base">Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2366891 - 2366892 - 2366893 / calle 2 sur Nº 10-72 </div>
       </Blockquote>
-      <div className="flex justify-center mt-2 ">
+      {/* <div className="flex justify-center mt-2 ">
         <img
-          src="/public/images/BannerNavabar.png"
+          src="/public/images/HONOR.png"
           alt="banner del navegador"
-          className="w-9/12 "
+          className="w-[65%]"
         />
-      </div>
-      <h1> consultar banner institucional</h1>
-      <div className="border border-black   my-4 mr-[12.5%]  ml-[12.5%]"></div>
+      </div> */}
+
+      {/* <div className="border border-black   my-4 mr-[12.5%]  ml-[12.5%]"></div> */}
       <Navbar fluid rounded className=" md:flex md:justify-center">
         <Navbar.Brand>
           <Anchor to="/" className="flex items-center ">
@@ -167,6 +167,7 @@ const NavBar = () => {
           ))}
         </Navbar.Collapse>
       </Navbar>
+      <div className="border-4 border-cyan-500  mt-2 my-4 mr-[12.5%]  ml-[12.5%] xl:block hidden"></div>
     </>
   );
 };

@@ -15,7 +15,7 @@ export const ViewCapacitacion = () => {
         <Card
           className="max-w-sm"
           imgAlt="Meaningful alt text for an image that is not purely decorative"
-          imgSrc="/public/images/capacitaciones.jpg"
+          imgSrc="/public/images/img3.JPG"
         >
           <Anchor to={"/capacitaciones_vista"}>
             <div className="flex justify-center">

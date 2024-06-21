@@ -34,7 +34,7 @@ export const Extinguisher = () => {
       <div className="mx-auto max-w-screen-xl px-4">
         <img
           className="h-96 w-full mb-7 rounded-lg object-cover  object-center shadow-xl shadow-blue-gray-900/50"
-          src="/public/images/bom.jpeg"
+          src="/public/images/img7.jpeg"
           alt="nature image"
         />
       </div>

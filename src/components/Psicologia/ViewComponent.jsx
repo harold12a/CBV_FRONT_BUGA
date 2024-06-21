@@ -8,14 +8,23 @@ import { Card } from "flowbite-react";
 export const ViewComponent = () => {
   return (
     <>
-      <div className="flex justify-center xl:justify-start ">
-        <Typography
-          variant="h4"
-          className=" font-bold pl-4 mt-4 md:pl-8 md:text-[20px] "
-        >
-          Psicologia
-        </Typography>
-      </div>
+    <Typography
+        variant="h4"
+        className=" font-bold pl-4 mt-4 md:pl-8 md:text-[20px] "
+      >
+      Psicologia
+      </Typography>
+      <Typography
+        variant="h6"
+        className="  md:pl-8 xl:block hidden   "
+      >
+      La capacitación en psicología de la emergencia es esencial para proporcionar
+      apoyo emocional y psicológico a las víctimas y a los primeros respondedores durante y después de un incidente crítico.
+       Este conocimiento ayuda a reducir el impacto del trauma, facilita la recuperación emocional y fortalece
+        la capacidad de enfrentar situaciones de alta tensión. Comprender y aplicar técnicas de 
+        intervención psicológica en emergencias es crucial para promover la resiliencia y el bienestar mental en tiempos de crisis.
+      </Typography>
+    
 
       <div className="border-t-2 border-gray-400 w-80  my-4"></div>
       <div className="flex xl:justify-around md:justify-center mt-4">
@@ -44,11 +53,10 @@ export const ViewComponent = () => {
         <div className="xl:block  hidden  ">
           <Card href="#" className="max-w-sm">
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
-              Noteworthy technology acquisitions 2021
+            ¿Por qué es importante la psicología de emergencias en la gestión de crisis?
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
+           
             </p>
           </Card>
         </div>
