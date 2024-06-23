@@ -211,7 +211,7 @@ const Principal = () => {
         ></iframe>
       </div>
       {/* unidades */}
-      <div className="bg-gray-200 pb-8 mx-4 ">
+      {/* <div className="bg-gray-200 pb-8 mx-4 ">
         <Typography
           variant="h4"
           className="font-bold pl-4 mt-[85px] md:pl-8 md:text-[30px] flex justify-center uppercase "
@@ -289,7 +289,7 @@ const Principal = () => {
             </div>
           </Avatar>
         </div>
-      </div>
+      </div> */}
       <h1 className="text-center text-lg mt-4 uppercase font-bold">
         pendiente incorporar lo de ley documentacion consultar{" "}
       </h1>

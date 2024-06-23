@@ -1,57 +1,60 @@
-import { HiOutlinePhoneOutgoing } from "react-icons/hi";
-import { BiLogoInstagram, BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
+
 import { Footer } from "flowbite-react";
+import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 
 const BackGround = () => {
   return (
     <>
-      <Footer container className="mt-5 bg-gray-100 dark:bg-gray-900">
-        <div className="w-full">
-          <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-            <div className="flex justify-around">
-              <HiOutlinePhoneOutgoing className="h-8 mr-3 text-2xl" />
-              <h1 className="text-xl">Emergencia 119</h1>
-            </div>
-            <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-              <div>
-                <Footer.Title title="Nosotros" />
-                <Footer.LinkGroup col>
-                  <Footer.Link href="#">Documentacion</Footer.Link>
-                  <Footer.Link href="#">Tailwind CSS</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
-              <div>
-                <Footer.Title title="Extra" />
-                <Footer.LinkGroup col>
-                  <Footer.Link href="#">Github</Footer.Link>
-                  <Footer.Link href="#">Discord</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
-              <div>
-                <Footer.Title title="Legal" />
-                <Footer.LinkGroup col>
-                  <Footer.Link href="#">Politicas de Privacidad</Footer.Link>
-                  {/* <Footer.Link href="#">Terms &amp; Conditions</Footer.Link> */}
-                  <Footer.Link href="#">Condiciones de uso</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
-            </div>
+    
+ <Footer bgDark>
+      <div className="w-full">
+        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
+          <div>
+            <Footer.Title title="Documentacion" />
+            <Footer.LinkGroup col>
+              <Footer.Link href="/">About</Footer.Link>
+              <Footer.Link href="#">Careers</Footer.Link>
+              <Footer.Link href="#">Brand Center</Footer.Link>
+              <Footer.Link href="#">Blog</Footer.Link>
+            </Footer.LinkGroup>
           </div>
-          <Footer.Divider />
-          <div className="w-full sm:flex sm:items-center sm:justify-between">
-            <Footer.Copyright
-              href="#"
-              by="Todos los derechos reservados elaborado por Harold Alzate"
-              year={2023}
-            />
-            <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-              <BiLogoInstagram className="text-3xl text-gray-900 hover:text-gray-900 dark:hover:text-white" />
-              <BiLogoFacebook className="text-3xl text-gray-900 hover:text-gray-900 dark:hover:text-white" />
-              <BiLogoTwitter className="text-3xl text-gray-900 hover:text-gray-900 dark:hover:text-white" />
-            </div>
+          <div>
+            <Footer.Title title="Redes Sociales" />
+            <Footer.LinkGroup col>
+              <Footer.Link href="https://www.instagram.com/bomberosbuga?igsh=MWQyOTd6Nmc5OXdpeA==">Instagram</Footer.Link>
+              <Footer.Link href="https://www.facebook.com/BomberosVoluntariosdeBuga/?locale=es_LA">Facebook</Footer.Link>
+            </Footer.LinkGroup>
+          </div>
+          <div>
+            <Footer.Title title="Contacto" />
+            <Footer.LinkGroup col>
+              <Footer.Link href="#">2366891 - 2366893 </Footer.Link>
+              <Footer.Link href="#">bugabomberos@gmail.com</Footer.Link>
+              <Footer.Link href="#">calle 2sur No 10-72, Buga, Colombia</Footer.Link>
+            </Footer.LinkGroup>
+          </div>
+          <div>
+            <Footer.Title title="Linea de Emergencia" />
+            <Footer.LinkGroup col>
+              <Footer.Link href="#">119</Footer.Link>
+              <Footer.Link href="#">2365889</Footer.Link>
+              {/* <Footer.Link href="#">Windows</Footer.Link>
+              <Footer.Link href="#">MacOS</Footer.Link> */}
+            </Footer.LinkGroup>
           </div>
         </div>
-      </Footer>
+        <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
+          <Footer.Copyright href="#" by="Realizado por: HAROLD HUMBERTO ALZATE AYALA™" year={2024} />
+          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+            <Footer.Icon href="https://www.facebook.com/BomberosVoluntariosdeBuga/?locale=es_LA" icon={BsFacebook} />
+            <Footer.Icon href="https://www.instagram.com/bomberosbuga?igsh=MWQyOTd6Nmc5OXdpeA==" icon={BsInstagram} />
+            {/* <Footer.Icon href="#" icon={BsTwitter} />
+            <Footer.Icon href="#" icon={BsGithub} />
+            <Footer.Icon href="#" icon={BsDribbble} /> */}
+          </div>
+        </div>
+      </div>
+    </Footer>
     </>
   );
 };

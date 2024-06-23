@@ -45,10 +45,11 @@ const Noticias = () => {
   const handleClear = () => {
     setTitleValue("");
     setImageValue("");
+   
     setDateValue("");
     setDescriptionValue("");
   };
-
+ 
   return (
     <>
       <div className="flex justify-around mt-4">
@@ -87,17 +88,7 @@ const Noticias = () => {
           value={descriptionValue}
           onChange={(e) => setDescriptionValue(e.target.value)}
         />
-        {/* <div className="flex w-72 flex-col gap-6">
-          <Select size="md" label="unidad">
-            <Option>Capitan</Option>
-            <Option>Teniente</Option>
-            <Option>Sub-teniente</Option>
-            <Option>Sargento</Option>
-            <Option>Cabo</Option>
-            <Option>Bombero</Option>
-          </Select>
-        </div> */}
-        {/* <Input color="teal" label="Nombre de la unidad" /> */}
+
       </div>
 
       <div className="flex flex-col w-72 mx-auto justify-center mt-5">
