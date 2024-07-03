@@ -89,16 +89,18 @@ const NavBar = () => {
         <div className="flex items-center  mx-2  pb-2 pt-2 ">
           <img src="/public/images/LOGO.png" alt="img-logo-bomberos" className="w-10 "  />
      <span className="flex-grow text-center text-base">
-     Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2366891 - 2366892 - 2366893 / calle 2 sur Nº 10-72 
+     Benemérito cuerpo de bomberos voluntarios buga /Alarma: 119 - 2366891 - 2366892 - 2366893 / Guardia: 2365889 - Prevención y seguridad: 2366888 <br />
+     Comando: 2366890 - Contabilidad: 2369167 E-mail: bugabomberos@gmail.com /
+     Dirección: Calle 2a Sur Nº 10-72 Guadalajara de Buga
      </span>
-    
-    
-       
-       
+
         </div>
       </Blockquote>
       <Blockquote className="bg-cyan-500 text-white xl:hidden block ">
-        <div className="text-center text-base">Cuerpo de Bomberos Voluntario de la Ciudad de Buga /  2366891 - 2366892 - 2366893 / calle 2 sur Nº 10-72 </div>
+        <div className="text-center text-base">
+        Benemérito cuerpo de bomberos voluntarios buga /Alarma: 119 - 2366891 - 2366892 - 2366893 / Guardia: 2365889 - Prevención y seguridad: 2366888 <br />
+       
+           </div>
       </Blockquote>
       {/* <div className="flex justify-center mt-2 ">
         <img

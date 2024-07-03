@@ -12,10 +12,10 @@ const BackGround = () => {
           <div>
             <Footer.Title title="Documentacion" />
             <Footer.LinkGroup col>
-              <Footer.Link href="/">About</Footer.Link>
+              {/* <Footer.Link href="/">About</Footer.Link>
               <Footer.Link href="#">Careers</Footer.Link>
               <Footer.Link href="#">Brand Center</Footer.Link>
-              <Footer.Link href="#">Blog</Footer.Link>
+              <Footer.Link href="" target="_blank">Blog</Footer.Link> */}
             </Footer.LinkGroup>
           </div>
           <div>
@@ -28,16 +28,16 @@ const BackGround = () => {
           <div>
             <Footer.Title title="Contacto" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#">2366891 - 2366893 </Footer.Link>
+              <Footer.Link href="#"> Guardia: 2365889  </Footer.Link>
               <Footer.Link href="#">bugabomberos@gmail.com</Footer.Link>
-              <Footer.Link href="#">calle 2sur No 10-72, Buga, Colombia</Footer.Link>
+              <Footer.Link href="#">calle 2a Sur Nº 10-72, Buga, Colombia</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>
             <Footer.Title title="Linea de Emergencia" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#">119</Footer.Link>
-              <Footer.Link href="#">2365889</Footer.Link>
+              <Footer.Link href="#">Alarma: 119 </Footer.Link>
+              <Footer.Link href="#"> Alarma: 2366891 - 2366892 - 2366893</Footer.Link>
               {/* <Footer.Link href="#">Windows</Footer.Link>
               <Footer.Link href="#">MacOS</Footer.Link> */}
             </Footer.LinkGroup>
